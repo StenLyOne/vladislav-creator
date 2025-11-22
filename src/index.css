@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("./assets/fonts/SuisseIntl-Regular.woff2") format("woff2"),
+    url("./assets/fonts/SuisseIntl-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("./assets/fonts/SuisseIntl-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --color-black: #131313;
+  --color-blue: #1e2eb8;
+  --color-grayTxt: #7988a3;
+  --color-stroke: #bbc6da;
+  --color-bg: #e8edf6;
+  --color-white: #ffffff;
+  --color-red: #eb1515;
+  --color-green: #14a800;
+
+  font-family: Manrope, "open-sans";
+  /* font-family: SuisseIntl, sans-serif; */
+  background-color: var(--color-bg);
+}
+
+.color-blue {
+  color: var(--color-blue);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.color-bg {
+  color: var(--color-bg);
+}
+
+.bg-bg {
+  background-color: var(--color-bg);
+}
+
+.color-grey {
+  color: var(--color-grayTxt);
+}
+
+.bg-grey {
+  background-color: var(--color-grayTxt);
+}
+
+.color-black {
+  color: var(--color-black);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-black75 {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.color-stroke {
+  color: var(--color-stroke);
+}
+
+.bg-stroke {
+  background-color: var(--color-stroke);
+}
+
+.bg-red {
+  background-color: var(--color-red);
+}
+
+.color-green {
+  color: var(--color-green);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em; /* -5% */
+}
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 78px;
+  line-height: 70px;
+  letter-spacing: -3.9px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 78px;
+  line-height: 70px;
+  letter-spacing: -3.9px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 41px;
+  line-height: 46px;
+  letter-spacing: -1.2px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em; /* -5% */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -2%;
+  font-weight: 500;
+}
+
+.brackets {
+  font-family: sans-serif;
+  font-size: 80px !important;
+  font-weight: 100;
+  line-height: 55px !important;
+  letter-spacing: -5% !important;
+}
+
+.card-hidden {
+  display: none;
+}
+
+.card-shadow {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.manrope {
+  font-family: Manrope, "open-sans";
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -5%;
+}
+
+.font-12 {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 14px !important;
+  letter-spacing: -5% !important;
+}
+
+.font-10 {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  line-height: 13.8px !important;
+  letter-spacing: -5% !important;
+}
+
+.hover-link {
+  line-height: 1.2em;
+  color: #0000;
+  text-shadow: 0 0 #131313, 0 1.2em #131313;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.hover-link:hover {
+  text-shadow: 0 -1.2em #1e2eb8, 0 0 #1e2eb8;
+}
+
+.hover-link-white {
+  line-height: 1.2em;
+  color: #0000;
+  text-shadow: 0 0 #fff, 0 1.2em #fff;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.hover-link-white:hover {
+  text-shadow: 0 -1.2em #fff, 0 0 #fff;
+}
+
+.header-link {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  letter-spacing: -0.4px !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 65px;
+    line-height: 57px;
+    letter-spacing: -3.9px;
+    font-weight: 600;
+  }
+
+  .h1-mob {
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 35px;
+    line-height: 33px;
+    letter-spacing: -1.9px;
+    font-weight: 600;
+    text-wrap-style: balance;
+  }
+
+  h2 {
+    font-size: 52px;
+    line-height: 50px;
+    letter-spacing: -1.9px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 35px;
+    line-height: 33px;
+    letter-spacing: -1.9px;
+    font-weight: 600;
+  }
+
+  .header-link {
+    font-size: 30px !important;
+    line-height: 33px !important;
+    letter-spacing: -1.9px !important;
+    font-weight: 600 !important;
+  }
+}
