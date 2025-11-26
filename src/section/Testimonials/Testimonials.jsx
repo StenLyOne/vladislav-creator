@@ -60,8 +60,8 @@ const services = [
     terms: "4 days+",
     description:
       "I create landing pages for any purpose: a product, a promo, an event, or a special project. Designed to convert and engage your audience.",
-    priceDesign: "300$",
-    priceDesignDev: "500$",
+    priceDesign: "700$",
+    priceDesignDev: "1400$",
     position: "top-0 left-10",
   },
   {
@@ -70,8 +70,8 @@ const services = [
     terms: "7 days+",
     description:
       "Online stores built for growth. A smooth user experience, easy checkout, and scalable design for any business.",
-    priceDesign: "500$",
-    priceDesignDev: "800$",
+    priceDesign: "1000$",
+    priceDesignDev: "2000$",
     position: "top-1/3 right-0",
   },
   {
@@ -80,8 +80,8 @@ const services = [
     terms: "4 days+",
     description:
       "Professional websites for companies that need a strong digital presence. Structured, informative, and built to impress.",
-    priceDesign: "400$",
-    priceDesignDev: "700$",
+    priceDesign: "1000$",
+    priceDesignDev: "2000$",
     position: "bottom-10 left-10",
   },
   {
@@ -90,8 +90,8 @@ const services = [
     terms: "10 days+",
     description:
       " Custom-built platforms with multiple pages, deep UX optimization, and seamless functionality for complex projects.",
-    priceDesign: "700$",
-    priceDesignDev: "1200$",
+    priceDesign: "2000$",
+    priceDesignDev: "4000$",
     position: "bottom-0 right-10",
   },
 ];
@@ -399,7 +399,7 @@ const Testimonials = () => {
                       <p className="font-medium" style={{ color: "#707BDA" }}>
                         Design+Dev:
                       </p>
-                      <p className="color-white">from {service.priceDesign}</p>
+                      <p className="color-white">from {service.priceDesignDev}</p>
                     </div>
                   </div>
                 </div>

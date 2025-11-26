@@ -3,6 +3,41 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
+    "title": "Podab Ecommerce",
+    "description": "Industrial equipment ecommerce",
+    "url": "https://www.podab.com/en-US",
+    "img": "src/assets/img/podab.png",
+    "imgMob": "src/assets/img/podab.png",
+    "did": [
+      "Complete redesign and frontend rebuild with a **clean, premium industrial aesthetic**",
+      "Optimized UX/UI for **fast product discovery** and clear comparison between machines",
+      "Strategic **CTAs, structured content flow and improved navigation** to drive more qualified inquiries"
+    ],
+    "results": [
+      "Better user clarity – Users reach key product pages **significantly faster** thanks to streamlined flows",
+      "Higher engagement – Product inquiries grew by **+38%** after restructuring CTAs and product pages",
+      "Stronger brand trust – The updated visual language increased direct online inquiries by **+29%**"
+    ]
+  },
+  {
+    "title": "Norrlands træ Ecommerce",
+    "description": "Sustainable Nordic wood panels & flooring",
+    "url": "https://www.norrlandstra.com/",
+    "category": "Corporate / Ecommerce",
+    "img": "src/assets/img/norrlandstra.png",
+    "imgMob": "src/assets/img/norrlandstra.png",
+    "did": [
+      "Full rebuild of the online store — custom frontend + optimized UX/UI with a **natural, Nordic look and feel**",
+      "UX redesign and information architecture overhaul to make products, guides and ordering process **clear and intuitive**",
+      "Responsive and performant frontend implementation ensuring **fast load times, SEO readiness and smooth browsing** on all devices"
+    ],
+    "results": [
+      "**Improved user experience** – site navigation and product browsing became significantly easier and more intuitive",
+      "**Higher engagement** – customers started exploring inspiration galleries and guides before purchase, which increased time on site and lead quality",
+      "**Better conversion rate & trust** – clearer product presentation and professional design boosted inquiry/quote requests and brand credibility"
+    ]
+  },
+  {
     title: "Nest villa",
     description: "Modern architecture & boutique home design",
     url: "https://nestvilla.netlify.app/",
@@ -20,21 +55,21 @@ const worksData = [
     ],
   },
   {
-    title: "REI",
-    description: "Real Estate SaaS",
-    url: "https://acecpas.com/",
-    img: "src/assets/img/ace.jpg",
-    imgMob: "src/assets/img/ACEmob.jpg",
-    did: [
-      "Complete redesign and development with a **[modern, professional]** aesthetic",
-      "Optimized UX/UI for **[seamless navigation]** and an efficient user experience",
-      "Strategic **[CTAs and clear content structure]** to drive higher conversions",
+    "title": "CMS",
+    "description": "Real-time Cough Monitoring for Clinical Trials",
+    "url": "https://www.coughmonitor.com/",
+    "img": "src/assets/img/cms.png",
+    "imgMob": "src/assets/img/cms.png",
+    "did": [
+      "Full website redesign and development with a **[clinical, data-driven aesthetic]** aligned with medical standards",
+      "UX/UI built around **[clarity, reliability, and scientific communication]**, making complex tech easy to grasp",
+      "Structured presentation of the CoughMonitor Suite, highlighting **[workflow, validation data, and trial readiness]**"
     ],
-    results: [
-      "Improved user experience – A **[well-structured layout]** helps users find key information faster",
-      "Higher conversion rates – Inquiries increased by **[+42%]** due to intuitive navigation and strong CTAs",
-      "Increased trust – **[+32%]** more clients opted to submit inquiries online without a prior call",
-    ],
+    "results": [
+      "Improved comprehension – Complex clinical technology is now explained through a **[clear, step-by-step UX flow]**",
+      "Higher engagement – Visitors interact more with validation data and workflow sections, increasing **[time on page by +31%]**",
+      "Stronger credibility – A professional, compliant visual identity reinforces CMS as a **[trusted clinical trial solution]**"
+    ]
   },
   {
     title: "SmartScape",
@@ -54,23 +89,6 @@ const worksData = [
     ],
   },
   {
-    title: "Vandstrom",
-    description: "Biotechnology & Advanced Filtration",
-    url: "https://vandstrom.com/",
-    img: "src/assets/img/vandstrom.jpg",
-    imgMob: "src/assets/img/vandstromMob.jpg",
-    did: [
-      "Full website design and development with a **[futuristic, science-driven]** aesthetic",
-      "UX/UI tailored for an **[intuitive, research-focused]** browsing experience",
-      "Custom animations and micro-interactions to enhance **[engagement and storytelling]**",
-    ],
-    results: [
-      "Improved user experience – A structured and visually immersive design makes **[complex scientific concepts]** more accessible",
-      "Higher engagement – Interactive elements led to a **[+28%]** increase in session duration",
-      "Stronger brand identity – A **[refined digital presence]** reinforced credibility within the biotech industry",
-    ],
-  },
-  {
     title: "Personify Health",
     description: "Digital Solutions for Corporate Health",
     url: "https://personifyhealth.com/global/de/",
@@ -87,24 +105,7 @@ const worksData = [
       "Increased trust – The refreshed website strengthened **[brand credibility]**, leading to a **[+31%]** rise in inquiries",
     ],
   },
-  {
-    title: "ITTCON",
-    description: "Sustainable Forestry & Green Investments",
-    url: "https://ittcon.eu/",
-    category: "Corporate",
-    img: "src/assets/img/ittcon.jpg",
-    imgMob: "src/assets/img/ittconMob.jpg",
-    did: [
-      "Complete redesign and development from scratch, creating a **[modern and intuitive website]**",
-      "A design that fully represents the company’s **[values and strengthens]** its visual identity",
-      "Thoughtfully structured UX/UI for seamless navigation and a better user experience",
-    ],
-    results: [
-      "**[+37%]** increase in inquiries due to improved usability and engagement",
-      "**[Stronger brand trust]**, leading to higher user interaction and credibility",
-      "**[+23%]** more investors and partnerships thanks to a professional and compelling online presence",
-    ],
-  },
+
 ];
 
 const Works = () => {
@@ -138,11 +139,9 @@ const Works = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: !isMobile ? index * 0.1 : 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            className={`relative transition-shadow duration-300 rounded-[10px] h-auto overflow-hidden ${
-              index % 2 !== 0 ? "min-[1280px]:translate-y-[125px]" : ""
-            } ${
-              showCard === index ? "shadow-[0px_1px_50px_rgba(0,0,0,0.15)]" : ""
-            }`}
+            className={`relative transition-shadow duration-300 rounded-[10px] h-auto overflow-hidden ${index % 2 !== 0 ? "min-[1280px]:translate-y-[125px]" : ""
+              } ${showCard === index ? "shadow-[0px_1px_50px_rgba(0,0,0,0.15)]" : ""
+              }`}
           >
             <div className="relative overflow-hidden">
               <div
@@ -173,11 +172,10 @@ const Works = () => {
               </div>
             </div>
             <div
-              className={`color-black bg-white absolute transition-all duration-300 w-full h-full left-[0px] px-[15px] py-[20px] flex flex-col items-start justify-center ${
-                showCard === index
-                  ? "top-[0%] opacity-100"
-                  : "top-full opacity-100"
-              } space-y-[20px]`}
+              className={`color-black bg-white absolute transition-all duration-300 w-full h-full left-[0px] px-[15px] py-[20px] flex flex-col items-start justify-center ${showCard === index
+                ? "top-[0%] opacity-100"
+                : "top-full opacity-100"
+                } space-y-[20px]`}
             >
               <div className="space-y-[10px] color-black">
                 <h4>What I did:</h4>

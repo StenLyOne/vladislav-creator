@@ -12,11 +12,11 @@ export const sendFormData = async (formData) => {
     const result = await response.json();
 
     if (response.ok) {
-      return { success: true, message: "Сообщение отправлено!" };
+      return { success: true, message: "Meassege send!" };
     } else {
-      return { success: false, message: result.error || "Ошибка при отправке" };
+      return { success: false, message: result.error || "Error of sending" };
     }
   } catch (error) {
-    return { success: false, message: "Ошибка сервера" };
+    return { success: false, message: "Error of server" };
   }
 };

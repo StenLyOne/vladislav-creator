@@ -39,8 +39,8 @@ const Contact = () => {
   const contactMethods = ["Telegram", "Gmail", "WhatsApp"];
 
   const handleSubmit = async () => {
-    
-   
+
+
     const newValidState = {
       name: focused.name.value.trim() !== "",
       contact: focused.contact.value.trim() !== "",
@@ -58,8 +58,8 @@ const Contact = () => {
       const result = await sendFormData({
         name: focused.name.value,
         contact: focused.contact.value,
-        budget: focused.budget.value || "Не указан",
-        message: focused.message.value || "Не указано",
+        budget: focused.budget.value || "",
+        message: focused.message.value || "",
       });
 
       if (result.success) {
@@ -74,7 +74,7 @@ const Contact = () => {
         setPopupStatus("❌ Failed to send: " + result.message);
       }
     } catch (error) {
-      setPopupStatus("❌ Failed to send. Please try again.");
+      setPopupStatus("❌ Failed to send. Please try again.",);
     }
 
     setTimeout(() => setShowPopup(false), 3000);
@@ -98,11 +98,10 @@ const Contact = () => {
             <div className="relative">
               <label
                 className={`absolute font-bold pointer-events-none transition-all duration-200
-                ${
-                  focused.name.bullet || focused.name.value
+                ${focused.name.bullet || focused.name.value
                     ? "text-[10px] text-gray-500 -top-3"
                     : "text-[18px] text-black top-1/2 -translate-y-1/2"
-                }`}
+                  }`}
               >
                 Name
               </label>
@@ -132,15 +131,13 @@ const Contact = () => {
                   }))
                 }
                 className={`w-full h-[43px] border-b-2 outline-none text-lg py-[10px] transition-all duration-200 
-                ${
-                  focused.name.value !== "" ? "border-black" : "border-gray-300"
-                } 
+                ${focused.name.value !== "" ? "border-black" : "border-gray-300"
+                  } 
                 ${!valid.name ? "border-red-500" : ""}`}
               />
               <div
-                className={`absolute top-1/2 -translate-y-1/2 right-[0px] w-[14px] h-[14px] rounded-full flex justify-center items-center ${
-                  valid.name === false ? "bg-red" : "bg-bg"
-                }`}
+                className={`absolute top-1/2 -translate-y-1/2 right-[0px] w-[14px] h-[14px] rounded-full flex justify-center items-center ${valid.name === false ? "bg-red" : "bg-bg"
+                  }`}
               >
                 <img
                   src={
@@ -162,11 +159,10 @@ const Contact = () => {
             <div className="relative">
               <label
                 className={`absolute font-bold pointer-events-none transition-all duration-200
-                ${
-                  focused.contact.bullet || focused.contact.value
+                ${focused.contact.bullet || focused.contact.value
                     ? "text-[10px] text-gray-500 -top-3"
                     : "text-[18px] text-black top-1/2 -translate-y-1/2"
-                }`}
+                  }`}
               >
                 Where you can be contacted
               </label>
@@ -196,17 +192,15 @@ const Contact = () => {
                   }));
                 }}
                 className={`w-full h-[43px] border-b-2 outline-none text-lg py-[10px] transition-all duration-200 
-                ${
-                  focused.contact.value !== ""
+                ${focused.contact.value !== ""
                     ? "border-black"
                     : "border-gray-300"
-                } 
+                  } 
                 ${!valid.contact ? "border-red-500" : ""}`}
               />
               <div
-                className={`absolute top-1/2 -translate-y-1/2 right-[0px] w-[14px] h-[14px] rounded-full flex justify-center items-center ${
-                  valid.name === false ? "bg-red" : "bg-bg"
-                }`}
+                className={`absolute top-1/2 -translate-y-1/2 right-[0px] w-[14px] h-[14px] rounded-full flex justify-center items-center ${valid.name === false ? "bg-red" : "bg-bg"
+                  }`}
               >
                 <img
                   src={
@@ -249,21 +243,18 @@ const Contact = () => {
                     }))
                   }
                   className={`relative  px-[12px] py-[6px] md:px-[10px] md:py-[4px] border rounded-full transition-all duration-200 md:overflow-hidden flex items-center justify-center group 
-                ${
-                  focused.budget.value === option
-                    ? "border-blue-800 text-blue-800 font-semibold"
-                    : "border-gray-300 text-black hover:border-gray-500 font-semibold"
-                }`}
+                ${focused.budget.value === option
+                      ? "border-blue-800 text-blue-800 font-semibold"
+                      : "border-gray-300 text-black hover:border-gray-500 font-semibold"
+                    }`}
                 >
                   {/* Невидимый текст для фиксации размера */}
                   <p
-                    className={` ${
-                      !isMobile ? "opacity-0 whitespace-nowrap" : ""
-                    } ${
-                      focused.budget.value === option
+                    className={` ${!isMobile ? "opacity-0 whitespace-nowrap" : ""
+                      } ${focused.budget.value === option
                         ? "color-blue font-semibold"
                         : "color-black font-semibold"
-                    }`}
+                      }`}
                   >
                     {option}
                   </p>
@@ -273,22 +264,20 @@ const Contact = () => {
                     <>
                       <span
                         className={`absolute inset-0 flex items-center justify-center transition-transform duration-300 
-                  ${
-                    focused.budget.value === option
-                      ? "text-blue-800" // Если кнопка активна, текст сразу синий
-                      : "text-black group-hover:-translate-y-full"
-                  }`}
+                  ${focused.budget.value === option
+                            ? "text-blue-800" // Если кнопка активна, текст сразу синий
+                            : "text-black group-hover:-translate-y-full"
+                          }`}
                       >
                         {option}
                       </span>
 
                       <span
                         className={`absolute inset-0 flex items-center justify-center transition-transform duration-300 translate-y-full 
-                  ${
-                    focused.budget.value === option
-                      ? "text-blue-800" // Если кнопка активна, текст сразу синий
-                      : "text-blue-800 group-hover:translate-y-0"
-                  }`}
+                  ${focused.budget.value === option
+                            ? "text-blue-800" // Если кнопка активна, текст сразу синий
+                            : "text-blue-800 group-hover:translate-y-0"
+                          }`}
                       >
                         {option}
                       </span>
@@ -314,11 +303,10 @@ const Contact = () => {
                 }))
               }
               className={`w-full border-b-2 focus:border-black outline-none text-lg py-[10px] pr-[10px] transition-all duration-200 
-              ${
-                focused.message.value !== ""
+              ${focused.message.value !== ""
                   ? "border-black"
                   : "border-gray-300"
-              }`}
+                }`}
               rows="3"
             ></textarea>
           </div>
@@ -368,8 +356,8 @@ const Contact = () => {
                 method === "Telegram"
                   ? "https://t.me/StenLyOne"
                   : method === "Gmail"
-                  ? "mailto:stenwlad@gmail.com"
-                  : "https://wa.me/+48600663072"
+                    ? "mailto:stenwlad@gmail.com"
+                    : "https://wa.me/+48600663072"
               }
               target="_blank"
               rel="noopener noreferrer"
