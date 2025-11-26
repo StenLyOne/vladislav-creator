@@ -9,14 +9,14 @@ const worksData = [
     "img": "/assets/img/podab.png",
     "imgMob": "/assets/img/podab.png",
     "did": [
-      "Complete redesign and frontend rebuild with a **clean, premium industrial aesthetic**",
-      "Optimized UX/UI for **fast product discovery** and clear comparison between machines",
-      "Strategic **CTAs, structured content flow and improved navigation** to drive more qualified inquiries"
+      "Complete redesign and frontend rebuild with a **[clean, premium industrial aesthetic]**",
+      "Optimized UX/UI for **[fast product discovery]** and clear comparison between machines",
+      "Strategic **[CTAs, structured content flow and improved navigation]** to drive more qualified inquiries"
     ],
     "results": [
-      "Better user clarity – Users reach key product pages **significantly faster** thanks to streamlined flows",
-      "Higher engagement – Product inquiries grew by **+38%** after restructuring CTAs and product pages",
-      "Stronger brand trust – The updated visual language increased direct online inquiries by **+29%**"
+      "Better user clarity – Users reach key product pages **[significantly faster]** thanks to streamlined flows",
+      "Higher engagement – Product inquiries grew by **[38%]** after restructuring CTAs and product pages",
+      "Stronger brand trust – The updated visual language increased direct online inquiries by **[+29%]**"
     ]
   },
   {
@@ -27,14 +27,14 @@ const worksData = [
     "img": "/assets/img/norrlandstra.png",
     "imgMob": "/assets/img/norrlandstra.png",
     "did": [
-      "Full rebuild of the online store — custom frontend + optimized UX/UI with a **natural, Nordic look and feel**",
-      "UX redesign and information architecture overhaul to make products, guides and ordering process **clear and intuitive**",
-      "Responsive and performant frontend implementation ensuring **fast load times, SEO readiness and smooth browsing** on all devices"
+      "Full rebuild of the online store — custom frontend + optimized UX/UI with a **[natural, Nordic look and feel]**",
+      "UX redesign and information architecture overhaul to make products, guides and ordering process **[clear and intuitive]**",
+      "Responsive and performant frontend implementation ensuring **[fast load times, SEO readiness and smooth browsing]** on all devices"
     ],
     "results": [
-      "**Improved user experience** – site navigation and product browsing became significantly easier and more intuitive",
-      "**Higher engagement** – customers started exploring inspiration galleries and guides before purchase, which increased time on site and lead quality",
-      "**Better conversion rate & trust** – clearer product presentation and professional design boosted inquiry/quote requests and brand credibility"
+      "**[Improved user experience]** – site navigation and product browsing became significantly easier and more intuitive",
+      "**[Higher engagement]** – customers started exploring inspiration galleries and guides before purchase, which increased time on site and lead quality",
+      "**[Better conversion rate & trust]** – clearer product presentation and professional design boosted inquiry/quote requests and brand credibility"
     ]
   },
   {
