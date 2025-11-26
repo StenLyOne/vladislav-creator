@@ -1,5 +1,5 @@
 import Button from "../../components/Button/Button";
-import arrow from "../../assets/img/arrow.svg";
+import arrow from "/assets/img/arrow.svg";
 
 const Main = ({ setIsOpen }) => {
   const handleSmoothScroll = (id) => {
@@ -28,7 +28,7 @@ const Main = ({ setIsOpen }) => {
                 <p className="color-blue brackets">(</p>
               </div>
               <div className="w-[80px] h-[80px] rounded-[100px] overflow-hidden">
-                <img src="src\assets\img\I.png" alt="" />
+                <img src="/assets/img/I.png" alt="" />
               </div>
               <div className="">
                 <p className="color-blue font-semibold">Human being</p>

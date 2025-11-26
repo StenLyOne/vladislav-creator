@@ -102,7 +102,7 @@ const PopUp = ({ close }) => {
           >
             <img
               className="w-[18px] h-[18px]"
-              src="src/assets/img/closeBlack.svg"
+              src="/assets/img/closeBlack.svg"
               alt=""
             />
           </button>
@@ -162,8 +162,8 @@ const PopUp = ({ close }) => {
                 <img
                   src={
                     valid.name === true && focused.name.value !== ""
-                      ? "src/assets/img/valid.svg"
-                      : "src/assets/img/invalid.svg"
+                      ? "/assets/img/valid.svg"
+                      : "/assets/img/invalid.svg"
                   }
                   alt=""
                 />
@@ -228,8 +228,8 @@ const PopUp = ({ close }) => {
                 <img
                   src={
                     valid.contact === true && focused.contact.value !== ""
-                      ? "src/assets/img/valid.svg"
-                      : "src/assets/img/invalid.svg"
+                      ? "/assets/img/valid.svg"
+                      : "/assets/img/invalid.svg"
                   }
                   alt=""
                 />

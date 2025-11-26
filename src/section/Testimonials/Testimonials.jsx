@@ -5,49 +5,49 @@ import AudioVisualizer from "../../components/AudioVisualizer/AudioVisualizer";
 const testimonials = [
   {
     id: 1,
-    img: "src/assets/img/Patryk.jpg",
+    img: "/assets/img/Patryk.jpg",
     name: "Patryk Szpilczynski",
     company: "Magic-Ibiza",
     title: "Site redesign",
     position: "bottom-4/8 left-20",
     positionMob: "top-10 left-3",
-    path: "src/assets/testimonials/Patryk.mp3",
+    path: "/assets/testimonials/Patryk.mp3",
     text: "My name is Patrick and I just wanted to share a quick review of the project with Vlad. So Vlad has done a complete redesign of my website. He introduced a very stunning and modern design using the most up-to-date trends and technologies. And he also worked on some monetization pages, ensuring the design and user experience were flawless. Generally, I am very happy with the end result. I feel that Vlad knows his stuff very well and he knows what he is doing. So he is definitely a skilled professional in design, UI and UX. He was easy to work with as well and also when problems or challenges arose we were able to solve them quickly. So he is a really good professional and I wish him all the best in the future.",
     top: false,
   },
   {
     id: 2,
-    img: "src/assets/img/Stefan.jpg",
+    img: "/assets/img/Stefan.jpg",
     name: "Stefan Julius",
     company: "ITTCON",
     title: "Better sales",
     position: "bottom-4/5 left-3/6",
     positionMob: "top-50 right-3",
-    path: "src/assets/testimonials/Stefan.mp3",
+    path: "/assets/testimonials/Stefan.mp3",
     text: "Hello, my name is Stefan Julius and I am Managing Director of ITTCON in Hamburg. I never thought a website could actually make such a big impact on my business. But after launching the site Vlad designed, I saw real changes—more inquiries, better engagement, and my brand started looking much more professional. The whole process was smooth, without any unnecessary back and forth, and Vlad always made sure everything was exactly how I wanted it. Definitely recommend!",
     top: false,
   },
   {
     id: 3,
-    img: "src/assets/img/Tomas.png",
+    img: "/assets/img/Tomas.png",
     name: "Tomas Petrauskas",
     company: "Sonaro",
     title: "User Growth",
     position: "bottom-3/10 right-1/5",
     positionMob: "bottom-1/3 left-1/6",
-    path: "src/assets/testimonials/Tomas.mp3",
+    path: "/assets/testimonials/Tomas.mp3",
     text: "As a SaaS company, we are looking for someone who could deliver not only a good-looking website, but also make it intuitive and user-friendly. Vlad did a perfect job. We received a lot of positive feedback from our users, and our metrics such as user session and retention rate have increased. He went above and beyond and exceeded our expectations. We are really glad that we had a chance to work with him. Thank you for your work. We are really glad that we had a chance to work with him. Thank you for your work.",
     top: true,
   },
   {
     id: 4,
-    img: "src/assets/img/Kseniya.png",
+    img: "/assets/img/Kseniya.png",
     name: "Kseniya Polyachenok",
     company: "Finance Pro",
     title: "Partnership",
     position: "top-8/10 left-3/3",
     positionMob: "top-4/5 left-1/5",
-    path: "src/assets/testimonials/Kseniya.mp3",
+    path: "/assets/testimonials/Kseniya.mp3",
     text: "Hi, my name is Ksenia Polyachenok, i have been working with Vlad for a year. I previously worked with an agency, and honestly, it was exhausting—slow responses, endless meetings, and unnecessary delays. But working with Vlad was complete opposite! Everything was structured and clear from the start. He always kept me updated, understood exactly what I wanted, and the final result turned out even better than I expected. If you’re tired of wasting time and just want a great website without hassle, Vlad is the right guy!",
     top: true,
   },
@@ -294,8 +294,8 @@ const Testimonials = () => {
                             className="w-[12px] h-[12px]"
                             src={
                               currentAudio === audioRefs.current[testimonial.id]
-                                ? "src/assets/img/pause.svg"
-                                : "src/assets/img/play.svg"
+                                ? "/assets/img/pause.svg"
+                                : "/assets/img/play.svg"
                             }
                             alt=""
                           />
@@ -329,7 +329,7 @@ const Testimonials = () => {
                     onMouseEnter={() => setIsOpen(testimonial.id)}
                     onMouseLeave={() => setIsOpen(null)}
                   >
-                    <img src="src/assets/img/A.svg" alt="" className="z-[10]" />
+                    <img src="/assets/img/A.svg" alt="" className="z-[10]" />
                     <div
                       className={`absolute bg-white p-[16px] rounded-[10px] color-blue min-w-[280px] z-[11] shadow-[0px_1px_50px_rgba(0,0,0,0.15)] ${
                         isMobile || testimonial.top === false

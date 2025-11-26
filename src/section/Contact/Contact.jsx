@@ -142,8 +142,8 @@ const Contact = () => {
                 <img
                   src={
                     valid.name === true && focused.name.value !== ""
-                      ? "src/assets/img/valid.svg"
-                      : "src/assets/img/invalid.svg"
+                      ? "/assets/img/valid.svg"
+                      : "/assets/img/invalid.svg"
                   }
                   alt=""
                 />
@@ -205,8 +205,8 @@ const Contact = () => {
                 <img
                   src={
                     valid.contact === true && focused.contact.value !== ""
-                      ? "src/assets/img/valid.svg"
-                      : "src/assets/img/invalid.svg"
+                      ? "/assets/img/valid.svg"
+                      : "/assets/img/invalid.svg"
                   }
                   alt=""
                 />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import arrowIcon from "../../assets/img/arrow2.svg";
+import arrowIcon from "/assets/img/arrow2.svg";
 import { useState, useEffect } from "react";
 
 const FAQItem = ({ id, question, answer, isOpen, setOpen }) => {
@@ -38,13 +38,12 @@ const FAQItem = ({ id, question, answer, isOpen, setOpen }) => {
             <h4 className="ml-[0px] md:ml-[120px] w-[80%]">{question}</h4>
             <button className="relative w-[26px] h-[26px] rounded-full flex items-start justify-center overflow-hidden">
               <motion.span
-                className={`relative transform transition-all duration-300 ${
-                  isOpen === id
+                className={`relative transform transition-all duration-300 ${isOpen === id
                     ? "top-[-100%]" // Если вопрос открыт, кнопка остается активной
-                    : activ  === id && !isMobile
-                    ? "top-[-100%]" // Если навели мышку, тоже активная
-                    : "top-[0%]" // В остальных случаях - стандартное положение
-                }`}
+                    : activ === id && !isMobile
+                      ? "top-[-100%]" // Если навели мышку, тоже активная
+                      : "top-[0%]" // В остальных случаях - стандартное положение
+                  }`}
               >
                 <span className="w-[26px] h-[26px] bg-stroke flex rounded-full items-center justify-center">
                   <img src={arrowIcon} alt="" className="rotate-180" />
@@ -53,9 +52,8 @@ const FAQItem = ({ id, question, answer, isOpen, setOpen }) => {
                   <img
                     src={arrowIcon}
                     alt=""
-                    className={`transform transition-all ${
-                      isOpen === id ? "rotate-0" : "rotate-180"
-                    }`}
+                    className={`transform transition-all ${isOpen === id ? "rotate-0" : "rotate-180"
+                      }`}
                   />
                 </span>
               </motion.span>

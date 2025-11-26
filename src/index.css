@@ -2,15 +2,15 @@
 
 @font-face {
   font-family: "SuisseIntl";
-  src: url("./assets/fonts/SuisseIntl-Regular.woff2") format("woff2"),
-    url("./assets/fonts/SuisseIntl-Medium.woff2") format("woff2");
+  src: url("/assets/fonts/SuisseIntl-Regular.woff2") format("woff2"),
+    url("/assets/fonts/SuisseIntl-Medium.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SuisseIntl";
-  src: url("./assets/fonts/SuisseIntl-Medium.woff2") format("woff2");
+  src: url("/assets/fonts/SuisseIntl-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -115,6 +115,7 @@ h1 {
   line-height: 70px;
   letter-spacing: -3.9px;
   font-weight: 600;
+  word-spacing: 10px;
 }
 
 h2 {
@@ -122,6 +123,7 @@ h2 {
   line-height: 70px;
   letter-spacing: -3.9px;
   font-weight: 600;
+  word-spacing: 7px;
 }
 
 h3 {
@@ -232,6 +234,7 @@ li {
     line-height: 57px;
     letter-spacing: -3.9px;
     font-weight: 600;
+    word-spacing: 7px;
   }
 
   .h1-mob {
@@ -245,6 +248,7 @@ li {
     letter-spacing: -1.9px;
     font-weight: 600;
     text-wrap-style: balance;
+    word-spacing: 3px;
   }
 
   h2 {
@@ -252,6 +256,7 @@ li {
     line-height: 50px;
     letter-spacing: -1.9px;
     font-weight: 600;
+    word-spacing: 3px;
   }
 
   h3 {

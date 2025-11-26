@@ -1,16 +1,16 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "../../components/Button/Button";
-import video from "../../assets/video/video.mp4";
+import video from "/assets/video/video.mp4";
 
 const About = ({ setIsOpen }) => {
   const sectionRef = useRef(null);
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
   const [hobbies, setHobbies] = useState(1);
   const images = {
-    1: "src/assets/img/Sketching.png",
-    2: "src/assets/img/Travel.png",
-    3: "src/assets/img/Chess.png",
+    1: "/assets/img/Sketching.png",
+    2: "/assets/img/Travel.png",
+    3: "/assets/img/Chess.png",
   };
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -245,7 +245,7 @@ const About = ({ setIsOpen }) => {
               : { y: yTransformPc, x: xTransformPc }
           }
         >
-          <img src="src\assets\img\pc.png" alt="" />
+          <img src="/assets/img/pc.png" alt="" />
         </motion.div>
         <motion.div
           className="relative md:px-[0px] flex flex-col md:flex-row inline-flex h-[150%] md:h-full justify-start items-start md:items-center bg-bg min-w-full z-[11]"
@@ -279,7 +279,7 @@ const About = ({ setIsOpen }) => {
             >
               {/* <img
                 className="w-full h-full object-cover rounded-[10px]"
-                src="src/assets/img/i2.png"
+                src="/assets/img/i2.png"
                 alt=""
               /> */}
               <div className="w-full h-full object-cover rounded-[10px]">
@@ -544,7 +544,7 @@ const About = ({ setIsOpen }) => {
               <div className="w-[270px] max-h-[360px] h-full">
                 <img
                   className="w-[270px] w-full max-h-[360px] h-full object-cover"
-                  src="src/assets/img/i2.png"
+                  src="/assets/img/i2.png"
                   alt=""
                 />
               </div>
