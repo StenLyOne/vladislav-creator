@@ -72,6 +72,23 @@ const worksData = [
     ]
   },
   {
+    "title": "REI Institute",
+    "description": "Real Estate Investment Certification Program",
+    "url": "https://reii-snowy.vercel.app",
+    "img": "src/assets/img/REI.png",
+    "imgMob": "src/assets/img/REI.png",
+    "did": [
+      "Full design and development of a **[premium, conversion-focused]** education platform for real estate investors",
+      "Structured UX/UI for **[clear program explanation]**, curriculum breakdown, and benefit-driven storytelling",
+      "Custom components for showcasing success metrics, testimonials, and certification value to **[boost enrollment]**"
+    ],
+    "results": [
+      "Higher enrollment intent – Clear value communication increased user engagement with CTAs by **[+34%]**",
+      "Improved clarity – Complex investment processes simplified via **[step-by-step UX flows]**, increasing time-on-page",
+      "Stronger credibility – A professional platform showcasing results, metrics, and testimonials boosted **[trust and conversions]**"
+    ]
+  },
+  {
     title: "SmartScape",
     description: "Innovative Smart Homes & Sustainable Technologies",
     url: "https://smartscape.netlify.app/",
@@ -86,23 +103,6 @@ const worksData = [
       "Intuitive interface improved usability, making the site more engaging. **[Increased organic traffic]**",
       "**[+35%]** in conversions due to well-structured navigation and strategic design triggers",
       "The new design transformed the **[brand’s online presence]**, positioning it as a more modern and tech-forward company",
-    ],
-  },
-  {
-    title: "Personify Health",
-    description: "Digital Solutions for Corporate Health",
-    url: "https://personifyhealth.com/global/de/",
-    img: "src/assets/img/personifyHealth.jpg",
-    imgMob: "src/assets/img/personifyHealthMob.jpg",
-    did: [
-      "Revamped the **[website structure]** to enhance clarity and ease of navigation",
-      "Optimized UX/UI for a seamless **[user journey]** and improved content accessibility",
-      "Integrated **[interactive elements]** and personalized content to increase engagement",
-    ],
-    results: [
-      "Improved user experience – Streamlined navigation helped visitors find key information **[35% faster]**",
-      "Higher engagement – Time spent on the site **[increased by 28%]** due to intuitive design and interactive content",
-      "Increased trust – The refreshed website strengthened **[brand credibility]**, leading to a **[+31%]** rise in inquiries",
     ],
   },
 

@@ -6,7 +6,7 @@ import Works from "./section/Works/Works.jsx";
 import Testimonials from "./section/Testimonials/Testimonials.jsx";
 import About from "./section/About/About.jsx";
 import FAQ from "./section/FAQ/FAQ.jsx";
-import Contact from "./section/contact/Contact.jsx";
+import Contact from "./section/Contact/Contact.jsx";
 import PopUp from "./section/PopUp/PopUp.jsx";
 import sendVisitNotification from "./utils/sendVisitNotification.js";
 
