@@ -3,6 +3,23 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
+    title: "Hyfe inc",
+    description: "Innovative Smart Homes & Sustainable Technologies",
+    url: "https://hyfe.com/",
+    img: "/assets/img/hyfe.png",
+    imgMob: "/assets/img/SmartScapeMob.jpg",
+    did: [
+      "Developed a **[modern, minimalist design]** with smooth animations and elegant 2D elements",
+      "Focused on simplicity and clarity – no clutter, just a **[sleek and functional]** aesthetic",
+      "Fully optimized for all devices, with **[interactive elements]** to enhance user engagement",
+    ],
+    results: [
+      "Intuitive interface improved usability, making the site more engaging. **[Increased organic traffic]**",
+      "**[+35%]** in conversions due to well-structured navigation and strategic design triggers",
+      "The new design transformed the **[brand’s online presence]**, positioning it as a more modern and tech-forward company",
+    ],
+  },
+  {
     "title": "Podab Ecommerce",
     "description": "Industrial equipment ecommerce",
     "url": "https://www.podab.com/en-US",
@@ -17,24 +34,6 @@ const worksData = [
       "Better user clarity – Users reach key product pages **[significantly faster]** thanks to streamlined flows",
       "Higher engagement – Product inquiries grew by **[38%]** after restructuring CTAs and product pages",
       "Stronger brand trust – The updated visual language increased direct online inquiries by **[+29%]**"
-    ]
-  },
-  {
-    "title": "Norrlands træ Ecommerce",
-    "description": "Sustainable Nordic wood panels & flooring",
-    "url": "https://www.norrlandstra.com/",
-    "category": "Corporate / Ecommerce",
-    "img": "/assets/img/norrlandstra.png",
-    "imgMob": "/assets/img/norrlandstra.png",
-    "did": [
-      "Full rebuild of the online store — custom frontend + optimized UX/UI with a **[natural, Nordic look and feel]**",
-      "UX redesign and information architecture overhaul to make products, guides and ordering process **[clear and intuitive]**",
-      "Responsive and performant frontend implementation ensuring **[fast load times, SEO readiness and smooth browsing]** on all devices"
-    ],
-    "results": [
-      "**[Improved user experience]** – site navigation and product browsing became significantly easier and more intuitive",
-      "**[Higher engagement]** – customers started exploring inspiration galleries and guides before purchase, which increased time on site and lead quality",
-      "**[Better conversion rate & trust]** – clearer product presentation and professional design boosted inquiry/quote requests and brand credibility"
     ]
   },
   {
@@ -72,28 +71,11 @@ const worksData = [
     ]
   },
   {
-    "title": "REI Institute",
-    "description": "Real Estate Investment Certification Program",
-    "url": "https://reii-snowy.vercel.app",
-    "img": "/assets/img/REI.png",
-    "imgMob": "/assets/img/REI.png",
-    "did": [
-      "Full design and development of a **[premium, conversion-focused]** education platform for real estate investors",
-      "Structured UX/UI for **[clear program explanation]**, curriculum breakdown, and benefit-driven storytelling",
-      "Custom components for showcasing success metrics, testimonials, and certification value to **[boost enrollment]**"
-    ],
-    "results": [
-      "Higher enrollment intent – Clear value communication increased user engagement with CTAs by **[+34%]**",
-      "Improved clarity – Complex investment processes simplified via **[step-by-step UX flows]**, increasing time-on-page",
-      "Stronger credibility – A professional platform showcasing results, metrics, and testimonials boosted **[trust and conversions]**"
-    ]
-  },
-  {
-    title: "SmartScape",
+    title: "ResolveDTx",
     description: "Innovative Smart Homes & Sustainable Technologies",
-    url: "https://smartscape.netlify.app/",
-    img: "/assets/img/smartScape.jpg",
-    imgMob: "/assets/img/SmartScapeMob.jpg",
+    url: "https://www.resolvedtx.com/",
+    img: "/assets/img/dtx.png",
+    imgMob: "/assets/img/dtx.png",
     did: [
       "Developed a **[modern, minimalist design]** with smooth animations and elegant 2D elements",
       "Focused on simplicity and clarity – no clutter, just a **[sleek and functional]** aesthetic",
@@ -105,6 +87,25 @@ const worksData = [
       "The new design transformed the **[brand’s online presence]**, positioning it as a more modern and tech-forward company",
     ],
   },
+  {
+    "title": "REI Institute",
+    "description": "Real Estate Investment Certification Program",
+    "url": "https://reii-snowy.vercel.app",
+    "category": "Corporate / Ecommerce",
+    "img": "/assets/img/REI.png",
+    "imgMob": "/assets/img/REI.png",
+    "did": [
+      "Full rebuild of the online store — custom frontend + optimized UX/UI with a **[natural, Nordic look and feel]**",
+      "UX redesign and information architecture overhaul to make products, guides and ordering process **[clear and intuitive]**",
+      "Responsive and performant frontend implementation ensuring **[fast load times, SEO readiness and smooth browsing]** on all devices"
+    ],
+    "results": [
+      "**[Improved user experience]** – site navigation and product browsing became significantly easier and more intuitive",
+      "**[Higher engagement]** – customers started exploring inspiration galleries and guides before purchase, which increased time on site and lead quality",
+      "**[Better conversion rate & trust]** – clearer product presentation and professional design boosted inquiry/quote requests and brand credibility"
+    ]
+  },
+
 
 ];
 
