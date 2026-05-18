@@ -7,7 +7,7 @@ const worksData = [
     description: "Innovative Smart Homes & Sustainable Technologies",
     url: "https://hyfe.com/",
     img: "/assets/img/hyfe.png",
-    imgMob: "/assets/img/SmartScapeMob.jpg",
+    imgMob: "/assets/img/hyfe.png",
     did: [
       "Developed a **[modern, minimalist design]** with smooth animations and elegant 2D elements",
       "Focused on simplicity and clarity – no clutter, just a **[sleek and functional]** aesthetic",
@@ -20,20 +20,38 @@ const worksData = [
     ],
   },
   {
-    "title": "Podab Ecommerce",
-    "description": "Industrial equipment ecommerce",
-    "url": "https://www.podab.com/en-US",
-    "img": "/assets/img/podab.png",
-    "imgMob": "/assets/img/podab.png",
+    "title": "Flouer",
+    "description": "Plant marketplace and care companion mobile app",
+    "url": "",
+    "category": "Mobile App / Marketplace",
+    "img": "/assets/img/flower.png",
+    "imgMob": "/assets/img/flower.png",
     "did": [
-      "Complete redesign and frontend rebuild with a **[clean, premium industrial aesthetic]**",
-      "Optimized UX/UI for **[fast product discovery]** and clear comparison between machines",
-      "Strategic **[CTAs, structured content flow and improved navigation]** to drive more qualified inquiries"
+      "Created the product concept combining **[plant shopping, care plans, and personalized recommendations]**",
+      "Designed the mobile UX/UI for marketplace, plant profiles, garden, care tasks, and onboarding",
+      "Defined the post-purchase care logic with **[ready-made plans, reminders, and task flows]**"
     ],
     "results": [
-      "Better user clarity – Users reach key product pages **[significantly faster]** thanks to streamlined flows",
-      "Higher engagement – Product inquiries grew by **[38%]** after restructuring CTAs and product pages",
-      "Stronger brand trust – The updated visual language increased direct online inquiries by **[+29%]**"
+      "**[Clear product value]** – users buy a plant and get guided care after purchase",
+      "**[Stronger purchase motivation]** – users see why a plant fits their room and skill level",
+      "**[Scalable foundation]** – the app can grow with more plants, rooms, care scenarios, and products"
+    ]
+  },
+  {
+    "title": "Forma Pilates",
+    "description": "Boutique Pilates video class app",
+    "url": "https://apps.apple.com/us/app/forma-pilates/id1568310325",
+    "img": "/assets/img/forma-pilates.png",
+    "imgMob": "/assets/img/forma-pilates.png",
+    "did": [
+      "Premium mobile experience for **[mat and reformer Pilates video classes]** with a boutique studio feeling",
+      "Structured content flow for **[full workouts, short classes and focused body programs]**",
+      "Elegant wellness UI built around **[precision, instructor guidance and at-home training]**"
+    ],
+    "results": [
+      "Clear course value, Users instantly understand the app offers **[exclusive studio-level Pilates at home]**",
+      "Flexible learning flow, Short and long classes make the product suitable for **[quick sessions or full workouts]**",
+      "Strong premium reference, The app combines **[video content, subscription access and boutique wellness branding]**"
     ]
   },
   {
@@ -87,26 +105,6 @@ const worksData = [
       "The new design transformed the **[brand’s online presence]**, positioning it as a more modern and tech-forward company",
     ],
   },
-  {
-    "title": "REI Institute",
-    "description": "Real Estate Investment Certification Program",
-    "url": "https://reii-snowy.vercel.app",
-    "category": "Corporate / Ecommerce",
-    "img": "/assets/img/REI.png",
-    "imgMob": "/assets/img/REI.png",
-    "did": [
-      "Full rebuild of the online store — custom frontend + optimized UX/UI with a **[natural, Nordic look and feel]**",
-      "UX redesign and information architecture overhaul to make products, guides and ordering process **[clear and intuitive]**",
-      "Responsive and performant frontend implementation ensuring **[fast load times, SEO readiness and smooth browsing]** on all devices"
-    ],
-    "results": [
-      "**[Improved user experience]** – site navigation and product browsing became significantly easier and more intuitive",
-      "**[Higher engagement]** – customers started exploring inspiration galleries and guides before purchase, which increased time on site and lead quality",
-      "**[Better conversion rate & trust]** – clearer product presentation and professional design boosted inquiry/quote requests and brand credibility"
-    ]
-  },
-
-
 ];
 
 const Works = () => {
@@ -217,7 +215,7 @@ const Works = () => {
                   ))}
                 </div>
               </div>
-              {isMobile ? (
+              {isMobile && works.url ? (
                 <a
                   className="ml-auto color-blue font-18 ml-auto font-bold"
                   target="_blank"
@@ -225,7 +223,7 @@ const Works = () => {
                 >
                   (Go to website)
                 </a>
-              ) : (
+              ) : works.url ? (
                 <a
                   className="ml-auto color-blue font-18 ml-auto font-bold"
                   target="_blank"
@@ -233,7 +231,7 @@ const Works = () => {
                 >
                   (Go to website)
                 </a>
-              )}
+              ) : null}
             </div>
           </motion.div>
         ))}
