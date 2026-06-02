@@ -1,6 +1,7 @@
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next"
 import localFont from "next/font/local";
 import { Manrope } from "next/font/google"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 const suisseIntl = localFont({
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
       <body className={`${suisseIntl.className} ${manrope.className}`}>
         {children}
         <Analytics />
+        <SpeedInsights/>
       </body>
     </html>
   );

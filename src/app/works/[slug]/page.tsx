@@ -6,6 +6,7 @@ import {
   getWorkCaseStudyBySlug,
   getWorkCaseStudySlugs,
 } from "../../../lib/works";
+import Button from "../../../components/Button/Button";
 import type {
   WorkCaseStudy,
   WorkFrameworkSection,
@@ -271,6 +272,18 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                   </p>
                   <p className={CONTENT_TEXT_CLASS}>{descriptionSummary}</p>
                 </div>
+
+                {work.externalProjectLink ? (
+                  <div className="pt-[6px]">
+                    <Button
+                      href={work.externalProjectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit Site
+                    </Button>
+                  </div>
+                ) : null}
               </article>
 
               <div className="overflow-hidden rounded-[10px] bg-white">

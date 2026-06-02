@@ -216,105 +216,105 @@ const caseStudyBase: WorkCaseStudy[] = [
     ],
     externalProjectLink: "",
   },
-  // {
-  //   slug: "forma-pilates",
-  //   title: "Forma Pilates",
-  //   heroOutcomeTitle:
-  //     "Made premium class discovery faster and clearer for subscription-based wellness users",
-  //   frameworkTags: ["UX/UI", "Product", "Subscription", "2025", "Mobile app"],
-  //   subtitle: "Boutique Pilates video class app",
-  //   shortDescription:
-  //     "Premium mobile UX for a subscription fitness product with guided classes, focused programs, and polished visual identity.",
-  //   category: "Fitness Product",
-  //   year: "2025",
-  //   clientName: "Forma Pilates",
-  //   heroImage: "/assets/img/forma-pilates.png",
-  //   overviewText:
-  //     "The goal was to capture a boutique studio feel in a mobile app while keeping the class catalogue quick to navigate and easy to personalize.",
-  //   storySections: [
-  //     {
-  //       title: "Challenge",
-  //       paragraphs: [
-  //         "Fitness content apps often feel overloaded and generic. This product needed premium positioning and faster class discovery.",
-  //         "Users should be able to jump into a class in seconds, whether they have 10 minutes or a full workout slot.",
-  //       ],
-  //     },
-  //     {
-  //       title: "Approach",
-  //       paragraphs: [
-  //         "We organized the information architecture around intent: quick sessions, full classes, and body-part programs.",
-  //         "UI language focused on clean typography, elegant spacing, and strong media hierarchy to highlight instructors and routines.",
-  //       ],
-  //     },
-  //     {
-  //       title: "Outcome",
-  //       paragraphs: [
-  //         "The concept balances premium brand feel with practical usability, making the subscription value immediately clear.",
-  //       ],
-  //     },
-  //   ],
-  //   office: "Remote",
-  //   team: "Designer + Product owner",
-  //   disciplines: ["Mobile UX", "Interface design", "Content hierarchy"],
-  //   services: ["Product audit", "Flows", "UI design", "Prototype"],
-  //   did: [
-  //     "Premium mobile experience for **[mat and reformer Pilates video classes]** with a boutique studio feeling",
-  //     "Structured content flow for **[full workouts, short classes and focused body programs]**",
-  //     "Elegant wellness UI built around **[precision, instructor guidance and at-home training]**",
-  //   ],
-  //   results: [
-  //     "Clear course value, Users instantly understand the app offers **[exclusive studio-level Pilates at home]**",
-  //     "Flexible learning flow, Short and long classes make the product suitable for **[quick sessions or full workouts]**",
-  //     "Strong premium reference, The app combines **[video content, subscription access and boutique wellness branding]**",
-  //   ],
-  //   externalProjectLink:
-  //     "https://apps.apple.com/us/app/forma-pilates/id1568310325",
-  //   gallery: [
-  //     {
-  //       type: "full",
-  //       image: "/assets/img/forma-pilates.png",
-  //       alt: "Forma Pilates key visual",
-  //     },
-  //     {
-  //       type: "split-text-image",
-  //       image: "/assets/img/ACE.jpg",
-  //       textTitle: "Studio feeling",
-  //       textBody:
-  //         "Motion, spacing, and visual rhythm were tuned to feel calm and premium without reducing clarity.",
-  //       insetImage: "/assets/img/Stefan.jpg",
-  //     },
-  //     {
-  //       type: "full",
-  //       image: "/assets/img/personifyHealth.jpg",
-  //       alt: "Workout content presentation",
-  //     },
-  //     {
-  //       type: "split-images",
-  //       leftImage: "/assets/img/forma-pilates.png",
-  //       rightImage: "/assets/img/personifyHealthMob.jpg",
-  //       leftCaption: "Browse",
-  //       rightCaption: "Play",
-  //     },
-  //     {
-  //       type: "city-strip",
-  //       backgroundImage: "/assets/img/ittcon.jpg",
-  //       cities: [
-  //         "Beginner",
-  //         "Intermediate",
-  //         "Advanced",
-  //         "Mat",
-  //         "Reformer",
-  //         "Recovery",
-  //       ],
-  //       sideImage: "/assets/img/forma-pilates.png",
-  //     },
-  //     {
-  //       type: "full",
-  //       image: "/assets/img/vandstromMob.jpg",
-  //       alt: "Final composition",
-  //     },
-  //   ],
-  // },
+  {
+    slug: "happly",
+    title: "Happly",
+    heroOutcomeTitle:
+      "Built a mood-based ecommerce experience that turns three products into bundles, subscriptions, and repeat purchases",
+    subtitle: "Mood-driven THC gummies ecommerce with subscription, bundle, and cart upsell mechanics",
+    shortDescription:
+      "A focused ecommerce experience for three functional gummy products: Socialize, Relax, and Sleep — built around mood selection, education, bundles, and subscribe-and-save.",
+    category: "Fitness Product",
+    year: "2025",
+    clientName: "Happly",
+    heroImage: "/assets/happly/happly.png",
+    overviewText:
+      "The goal was to make a small three-product catalog feel simple, trustworthy, and commercially stronger through mood-based discovery, product education, bundle logic, and subscription-driven repeat purchases.", externalProjectLink:
+      "https://gethapply.com/",
+    role: ["UX strategy", "UI design", "Ecommerce structure", "Cart optimization", "Subscription flow", "Product storytelling"],
+    frameworkSections: [
+      {
+        id: "problems",
+        title: "Problems",
+        paragraphs: [
+          "The product line had only three main SKUs, so the store needed to increase order value without making the shopping flow feel heavy.",
+          "Users had to understand the difference between Socialize, Relax, and Sleep quickly.",
+          "THC products need more trust, education, and clarity than a regular snack brand.",
+          "One-time purchases alone limit repeat revenue, so subscription and bundle mechanics had to become part of the core flow.",
+        ],
+        media: [
+          {
+            type: "image",
+            url: "/assets/happly/problem.png",
+          },
+        ],
+      },
+      {
+        id: "insight",
+        title: "Insight",
+        paragraphs: [
+          "The main buying logic is not product-first, but mood-first.",
+          "Users do not just choose gummies — they choose the state they want: socialize, relax, or sleep.",
+          "Bundles, free shipping thresholds, and subscribe-and-save create a smarter path to higher AOV.",
+          "Education around dosage, ingredients, effects, and FAST technology helps reduce hesitation before checkout.",
+        ],
+        media: {
+          type: "video",
+          url: "/assets/happly/hero.mp4",
+        },
+      },
+      {
+        id: "decision",
+        title: "Decision",
+        paragraphs: [
+          "I structured the ecommerce experience around mood selection, product clarity, and repeat purchase mechanics.",
+          "Each product page explains the mood, perfect use case, ingredients, dosage, reviews, and related moods.",
+          "The cart was designed to push business goals directly: free shipping threshold, bundle discount, promo code, and subscription upsell.",
+          "Subscribe & save was positioned as a natural upgrade, not a separate hidden flow.",
+          "The product ecosystem was kept simple: three moods, clear benefits, strong education, and repeat delivery.",
+        ],
+        media: {
+          type: "video",
+          url: "/assets/happly/products.mp4",
+        },
+      },
+      {
+        id: "after",
+        title: "After",
+        paragraphs: [
+          "The store feels simple even with subscriptions, bundles, education, reviews, and compliance-heavy content.",
+          "Users can choose by mood, compare products faster, and understand what each gummy is made for.",
+          "The cart actively supports higher order value through bundles, free shipping, and subscription prompts.",
+          "The brand experience connects product discovery, education, purchase, and repeat delivery into one flow.",
+        ],
+        media: [
+          {
+            type: "image",
+            url: "/assets/happly/after-1.png",
+          },
+          {
+            type: "image",
+            url: "/assets/happly/after-2.png",
+          },
+        ],
+      },
+      {
+        id: "business-value",
+        title: "Business value",
+        paragraphs: [
+          "Mood-based navigation makes the three-product catalog easier to understand.",
+          "Bundle mechanics increase the chance of multi-product orders.",
+          "Free shipping thresholds push users toward higher cart value.",
+          "Subscribe & save creates a path to recurring revenue.",
+          "Product education and reviews help reduce purchase hesitation in a regulated category.",
+        ],
+        media: {
+          type: "image",
+          url: "/assets/happly/business-value.png",
+        },
+      },
+    ],
+  },
   {
     slug: "planiq",
     title: "PlanIQ",
