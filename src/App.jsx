@@ -1,6 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Header from "./components/Header/Header.jsx";
 import Main from "./section/Main/Main.jsx";
 import Works from "./section/Works/Works.jsx";
 import Testimonials from "./section/Testimonials/Testimonials.jsx";
@@ -23,10 +24,10 @@ function App() {
 
   return (
     <div className="bg-white flex flex-col md:flex-row w-auto relative ">
-      <div className="w-full h-auto md:w-1/5 z-[6] md:z-[9] ">
-        <Header />
-      </div>
-      <div className="md:w-4/5 z-[5] md:z-[10]">
+
+      {/* <Header /> */}
+
+      <div className="w-full max-w-[1920px] z-[5] md:z-[10] mx-auto">
         <Main setIsOpen={setIsOpen} />
         <Works />
         <Testimonials />

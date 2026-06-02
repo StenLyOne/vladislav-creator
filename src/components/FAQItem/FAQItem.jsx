@@ -1,22 +1,13 @@
 import { motion } from "framer-motion";
-import arrowIcon from "/assets/img/arrow2.svg";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const FAQItem = ({ id, question, answer, isOpen, setOpen }) => {
   const toggleFAQ = () => {
     setOpen(isOpen === id ? null : id);
   };
   const [activ, setActiv] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile();
 
   return (
     <div
@@ -46,11 +37,11 @@ const FAQItem = ({ id, question, answer, isOpen, setOpen }) => {
                   }`}
               >
                 <span className="w-[26px] h-[26px] bg-stroke flex rounded-full items-center justify-center">
-                  <img src={arrowIcon} alt="" className="rotate-180" />
+                  <img src="/assets/img/arrow2.svg" alt="" className="rotate-180" />
                 </span>
                 <span className="w-[26px] h-[26px] bg-blue flex rounded-full items-center justify-center">
                   <img
-                    src={arrowIcon}
+                    src="/assets/img/arrow2.svg"
                     alt=""
                     className={`transform transition-all ${isOpen === id ? "rotate-0" : "rotate-180"
                       }`}

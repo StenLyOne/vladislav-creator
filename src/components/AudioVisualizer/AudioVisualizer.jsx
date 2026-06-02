@@ -15,7 +15,7 @@ const AudioVisualizer = ({ isPlaying }) => {
           width="1.7"
           height={height}
           fill="#1E2EB8"
-          rx="" // Округленные углы
+          rx="1"
         >
           {isPlaying && (
             <>

@@ -1,21 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Button from "../../components/Button/Button";
 import { sendFormData } from "../../utils/api";
 import Modal from "../../components/modal/modal";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const PopUp = ({ close }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const isMobile = useIsMobile();
   const [popupStatus, setPopupStatus] = useState("");
   const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const [focused, setFocused] = useState({
     name: { value: "", bullet: false },
@@ -71,7 +63,7 @@ const PopUp = ({ close }) => {
       } else {
         setPopupStatus("❌ Failed to send: " + result.message);
       }
-    } catch (error) {
+    } catch {
       setPopupStatus("❌ Failed to send. Please try again.");
     }
 
@@ -87,7 +79,7 @@ const PopUp = ({ close }) => {
       >
         Close
         <span>
-          <img src="src\assets\img\close.svg" alt="" />
+          <img src="/assets/img/close.svg" alt="" />
         </span>
       </button>
       <div className="flex flex-row max-[1100px]:flex-col justify-between w-full p-[16px] min-[670px]:p-[40px] md:rounded-[10px] bg-white">
@@ -354,6 +346,7 @@ const PopUp = ({ close }) => {
           <a
             href="https://www.upwork.com/freelancers/~01e0b5eb4d34696c94"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <button className="relative px-[10px] py-[4px] border rounded-full transition-all duration-200 border-green-600 overflow-hidden h-auto flex items-center justify-center group">
               <p className="opacity-0 whitespace-nowrap"> Up Work</p>

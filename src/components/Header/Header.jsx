@@ -1,21 +1,11 @@
 import { useState, useEffect } from "react";
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [isOpen, setIsOpen] = useState(false);
   const contactMethods = ["Telegram", "Gmail", "WhatsApp"];
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
   }, [isOpen]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleSmoothScroll = (id) => {
     const target = document.getElementById(id);
@@ -37,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed md:w-[20%] w-full h-auto bg-white z-50 md:h-screen">
+    <header className="fixed  flex w-full h-auto  z-50 md:h-screen">
       <div className="h-[6.32vh] md:h-auto p-5 md:p-[30px] flex justify-between items-center md:flex-col md:items-start">
         {/* Логотип */}
         <h4 className="color-blue">
@@ -66,7 +56,7 @@ const Header = () => {
             <span className="w-[16px] h-[16px]">
               <img
                 className="w-[16px] h-[16px]"
-                src="src\assets\img\closeBlack.svg"
+                src="/assets/img/closeBlack.svg"
                 alt=""
               />
             </span>
@@ -76,11 +66,11 @@ const Header = () => {
 
       {/* Меню */}
       <nav
-        className={`absolute md:relative flex flex-col items-start justify-center px-[16px] md:px-[0px] md:pt-[90px] md:pl-[30px] h-[93.62vh] md:h-auto w-full md:w-full bg-white transition-transform duration-300 ease-in-out md:flex md:translate-y-0 ${
+        className={`absolute md:relative flex  items-start justify-center px-[16px] md:px-[0px] md:pt-[90px] md:pl-[30px] h-[93.62vh] md:h-max w-full md:w-full bg-white transition-transform duration-300 ease-in-out md:flex md:translate-y-0 ${
           isOpen ? "translate-y-0" : "-translate-y-[-100%]"
         }`}
       >
-        <ul className="flex text-start flex-col space-y-[20px] md:p-0 md:space-y-[5px] ">
+        <ul className="flex text-start  space-y-[20px] md:p-0 md:space-y-[5px] ">
           {[
             { label: "Home", link: "#home" },
             { label: "Cases", link: "#cases" },
@@ -99,7 +89,8 @@ const Header = () => {
                   {item.label}
                 </a>
               ) : (
-                <a
+                <button
+                  type="button"
                   onClick={() => {
                     item.action();
                     setIsOpen(false);
@@ -107,7 +98,7 @@ const Header = () => {
                   className="bg-transparent border-none p-0 m-0"
                 >
                   {item.label}
-                </a>
+                </button>
               )}
             </li>
           ))}
@@ -119,6 +110,7 @@ const Header = () => {
             <a
               href="https://www.upwork.com/freelancers/~01e0b5eb4d34696c94"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button className="relative px-[10px] py-[4px] border rounded-full transition-all duration-200 border-green-600 overflow-hidden h-auto flex items-center justify-center group">
                 <p className="opacity-0 whitespace-nowrap"> Up Work</p>

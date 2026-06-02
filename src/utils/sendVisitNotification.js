@@ -1,6 +1,6 @@
 const sendVisitNotification = async () => {
   try {
-    await fetch("https://senderbot-9qcp.onrender.com/visit", {
+    await fetch("/api/visit", {
       method: "POST",
     });
   } catch (error) {

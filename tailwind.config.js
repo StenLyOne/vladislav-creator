@@ -1,4 +1,4 @@
-export default {
+const tailwindConfig = {
   theme: {
     extend: {
       colors: {
@@ -8,3 +8,5 @@ export default {
   },
   plugins: [],
 };
+
+export default tailwindConfig;

@@ -1,9 +1,6 @@
 export const sendFormData = async (formData) => {
   try {
-    // Пробуждаем сервер перед отправкой формы
-    await fetch("https://senderbot-9qcp.onrender.com/wake-up").catch(() => {});
-
-    const response = await fetch("https://senderbot-9qcp.onrender.com/send", {
+    const response = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -12,11 +9,14 @@ export const sendFormData = async (formData) => {
     const result = await response.json();
 
     if (response.ok) {
-      return { success: true, message: "Meassege send!" };
+      return { success: true, message: result.message || "Message sent!" };
     } else {
-      return { success: false, message: result.error || "Error of sending" };
+      return {
+        success: false,
+        message: result.message || result.error || "Error of sending",
+      };
     }
-  } catch (error) {
+  } catch {
     return { success: false, message: "Error of server" };
   }
 };

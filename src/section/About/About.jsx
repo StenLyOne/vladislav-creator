@@ -1,44 +1,17 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "../../components/Button/Button";
-import video from "/assets/video/video.mp4";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const About = ({ setIsOpen }) => {
   const sectionRef = useRef(null);
-  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
   const [hobbies, setHobbies] = useState(1);
   const images = {
     1: "/assets/img/Sketching.png",
     2: "/assets/img/Travel.png",
     3: "/assets/img/Chess.png",
   };
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    const updateHeight = () => {
-      setScreenHeight(window.innerHeight);
-    };
-
-    window.addEventListener("resize", updateHeight);
-    window.addEventListener("orientationchange", updateHeight); // 📌 Для телефонов
-
-    // Запускаем обновление высоты сразу после монтирования
-    updateHeight();
-
-    return () => {
-      window.removeEventListener("resize", updateHeight);
-      window.removeEventListener("orientationchange", updateHeight);
-    };
-  }, []);
+  const isMobile = useIsMobile();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -249,7 +222,7 @@ const About = ({ setIsOpen }) => {
         </motion.div>
         <motion.div
           className="relative md:px-[0px] flex flex-col md:flex-row inline-flex h-[150%] md:h-full justify-start items-start md:items-center bg-bg min-w-full z-[11]"
-          style={isMobile ? "" : { x: xTransform }}
+          style={isMobile ? undefined : { x: xTransform }}
         >
           <div className="relative w-[100vw] h-full px-[16px] md:pt-[0px] pt-[40px] md:px-[0px] flex flex-col md:flex-row justify-end items-center z-10">
             <motion.div
@@ -284,7 +257,7 @@ const About = ({ setIsOpen }) => {
               /> */}
               <div className="w-full h-full object-cover rounded-[10px]">
                 <video
-                  src={video}
+                  src="/assets/video/video.mp4"
                   autoPlay
                   loop
                   muted
@@ -555,6 +528,7 @@ const About = ({ setIsOpen }) => {
                     className="color-green underline"
                     target="_blank"
                     href="https://www.upwork.com/freelancers/~01e0b5eb4d34696c94"
+                    rel="noopener noreferrer"
                   >
                     Upwork.
                   </a>

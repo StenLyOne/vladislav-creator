@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AudioVisualizer from "../../components/AudioVisualizer/AudioVisualizer";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const testimonials = [
   {
@@ -99,21 +100,12 @@ const services = [
 const Testimonials = () => {
   const sectionRef = useRef(null);
   const [isOpen, setIsOpen] = useState(null);
-  const [currentAudio, setCurrentAudio] = useState(null);
+  const [currentAudioId, setCurrentAudioId] = useState(null);
   const [duration, setDuration] = useState({});
   const [currentTime, setCurrentTime] = useState({});
   const audioRefs = useRef({});
   const intervalRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     return () => {
@@ -127,17 +119,15 @@ const Testimonials = () => {
     const audio = audioRefs.current[id];
     if (!audio) return;
 
-    // Если уже играет другое аудио - ставим его на паузу
-    if (currentAudio && currentAudio !== audio) {
-      currentAudio.pause();
+    if (currentAudioId && currentAudioId !== id) {
+      const previousAudio = audioRefs.current[currentAudioId];
+      previousAudio?.pause();
       clearInterval(intervalRef.current);
     }
 
     if (audio.paused) {
       audio.play();
-      setCurrentAudio(audio);
-
-      // Запускаем интервал для обновления времени
+      setCurrentAudioId(id);
       intervalRef.current = setInterval(() => {
         setCurrentTime((prev) => ({
           ...prev,
@@ -147,7 +137,7 @@ const Testimonials = () => {
     } else {
       audio.pause();
       clearInterval(intervalRef.current);
-      setCurrentAudio(null);
+      setCurrentAudioId(null);
     }
   };
 
@@ -166,7 +156,7 @@ const Testimonials = () => {
   };
 
   const handleEnded = (id) => {
-    setCurrentAudio(null);
+    setCurrentAudioId(null);
     clearInterval(intervalRef.current);
     setCurrentTime((prev) => ({
       ...prev,
@@ -230,7 +220,6 @@ const Testimonials = () => {
             style={{
               opacity: titleOpacity1,
               y: titleY1,
-              color: scrollYProgress,
             }}
           >
             WHAT MY <br />
@@ -290,13 +279,13 @@ const Testimonials = () => {
                           className=" w-[24px] h-[24px] flex items-center justify-center"
                           onClick={() => handlePlay(testimonial.id)}
                         >
-                          <img
-                            className="w-[12px] h-[12px]"
-                            src={
-                              currentAudio === audioRefs.current[testimonial.id]
+                            <img
+                              className="w-[12px] h-[12px]"
+                              src={
+                                currentAudioId === testimonial.id
                                 ? "/assets/img/pause.svg"
                                 : "/assets/img/play.svg"
-                            }
+                              }
                             alt=""
                           />
                         </button>
@@ -308,9 +297,7 @@ const Testimonials = () => {
                     <div className="flex items-center gap-[5px]">
                       <span>
                         <AudioVisualizer
-                          isPlaying={
-                            currentAudio === audioRefs.current[testimonial.id]
-                          }
+                          isPlaying={currentAudioId === testimonial.id}
                         />
                       </span>
                       {duration[testimonial.id] && (
@@ -339,7 +326,7 @@ const Testimonials = () => {
                     >
                       <p>{testimonial.text}</p>
                       <img
-                        src="src\assets\img\vector.svg"
+                        src="/assets/img/vector.svg"
                         alt=""
                         className={`absolute ${
                           isMobile || testimonial.top === false

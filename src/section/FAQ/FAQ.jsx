@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import FAQItem from "../../components/FAQItem/FAQItem";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const faqData = [
   {
@@ -52,17 +53,8 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const isMobile = useIsMobile();
   const [openFAQ, setOpenFAQ] = useState(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <section

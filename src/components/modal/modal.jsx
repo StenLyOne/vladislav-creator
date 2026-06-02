@@ -1,4 +1,4 @@
-const Popup = ({ message, onClose }) => {
+const Popup = ({ message }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-[100]">
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
