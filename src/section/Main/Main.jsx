@@ -18,7 +18,7 @@ const Main = ({ setIsOpen }) => {
     >
       <div className="absolute left-1/2 top-0 right-0 bottom-0 h-full  -translate-x-1/2 w-screen  pointer-events-none z-0">
         <div
-          className="h-full w-full rounded-[10px]"
+          className="h-full w-full"
           style={{
             background:
               "linear-gradient(to bottom, #1E2EB8 0%, #424EB0 35%, #5781BE 50%, #87A1C4 63%, #C1D3E6 79%, #FFFFFF 100%)",
@@ -33,7 +33,7 @@ const Main = ({ setIsOpen }) => {
             <p className="text-white mx-auto text-center">/ / Avaliable for freelance work</p>
           </div>
           <div className="md:space-y-[240px] flex flex-col items-center space-y-[180px]">
-            <div className="flex items-center gap-[20px]">
+            <div className="flex items-center gap-[20px] z-1000">
               <div>
                 <p className="text-white brackets">(</p>
               </div>
@@ -59,7 +59,7 @@ const Main = ({ setIsOpen }) => {
                   <div className="min-w-[463px] min-h-[400px] z-1 bg-white blur-[150px] -bottom-60 -left-20 absolute rounded-2xl"></div>
                 </div>
 
-                <div className="relative w-[200px] h-1 z-100">
+                <div className="relative w-[200px] h-1 z-100  max-md:hidden ">
                   <div className="light-ray z-100 rotate-30 -bottom-40 -right-25"></div>
                   <div className="light-ray z-100 rotate-30 -bottom-40 -right-60"></div>
                   <div className="light-ray z-100 rotate-35 -bottom-40 -right-110"></div>
@@ -88,7 +88,7 @@ const Main = ({ setIsOpen }) => {
               </div>
               <div className="flex justify-center w-full gap-[5px] mt-[50px] z-100 relative">
                 <div onClick={() => setIsOpen(true)}>
-                  <Button>Let’s craft your perfect website</Button>
+                  <Button>Let’s start</Button>
                 </div>
                 <button
                   onClick={() => handleSmoothScroll("cases")}

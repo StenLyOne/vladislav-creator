@@ -1,13 +1,37 @@
 const SENDERBOT_BASE_URL =
   process.env.SENDERBOT_BASE_URL ?? "https://senderbot-9qcp.onrender.com";
+
 const isDev = process.env.NODE_ENV === "development";
 
-export async function POST() {
+export async function POST(request) {
   try {
-    if (isDev) return;
+    if (isDev) {
+      return Response.json({ success: false, ignored: "development" });
+    }
+
+    const country = request.headers.get("x-vercel-ip-country") || "Unknown";
+    const city = request.headers.get("x-vercel-ip-city") || "Unknown";
+    const ua = request.headers.get("user-agent")?.toLowerCase() || "";
+
+    const isBot =
+      /bot|crawler|spider|crawling|lighthouse|pagespeed|headless|puppeteer|playwright|facebookexternalhit|whatsapp|telegrambot|slackbot|discordbot|skypeuripreview|googlebot|bingbot|yandexbot|duckduckbot|baiduspider|gptbot|claudebot|perplexitybot/i.test(
+        ua,
+      );
+
+    if (isBot) {
+      return Response.json({ success: false, ignored: "bot" });
+    }
+
     await fetch(`${SENDERBOT_BASE_URL}/visit`, {
       method: "POST",
       cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        country,
+        city,
+      }),
     });
 
     return Response.json({ success: true });

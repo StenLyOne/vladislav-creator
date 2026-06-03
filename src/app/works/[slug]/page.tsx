@@ -12,6 +12,7 @@ import type {
   WorkFrameworkSection,
   WorkMedia,
 } from "../../../data/works";
+import { useVisitTracking } from "../../../hooks/useVisitTracking";
 
 const CONTENT_TEXT_CLASS =
   "text-[14px] leading-[18px] font-semibold color-black normal-case text-balance";
@@ -223,15 +224,15 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
 
           </div>
 
-          <div className="hidden md:flex flex-col px-[30px] pt-[90px] space-y-[10px] gap-2">
-            <Link href="/#cases" className="header-link flex justify-between items-center w-max gap-2">
+          <div className="flex flex-col px-[30px] md:pt-[90px] space-y-[10px] gap-2">
+            <Link href="/#cases" className="header-link flex justify-between items-center w-max gap-2 max-md:text-[14px]! max-md:tracking-[0px]!">
               <svg className="rotate-" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 12.5C2 12.8117 2.13746 13.1092 2.38488 13.35L9.47766 20.6458C9.72509 20.8867 10 21 10.2887 21C10.8935 21 11.3608 20.5325 11.3608 19.895C11.3608 19.5975 11.2646 19.3 11.0584 19.1017L9.16151 17.0758L5.24399 13.4492L7.9244 13.6475H20.9003C21.5464 13.6475 22 13.1658 22 12.5C22 11.8342 21.5464 11.3525 20.9003 11.3525H7.9244L5.25773 11.5508L9.16151 7.92417L11.0584 5.89833C11.2646 5.7 11.3608 5.4025 11.3608 5.105C11.3608 4.4675 10.8935 4 10.2887 4C10 4 9.72509 4.11333 9.47766 4.35417L2.38488 11.65C2.13746 11.8908 2 12.1883 2 12.5Z" fill="#000" />
               </svg>
               Back to works
             </Link>
             {work.externalProjectLink ? (
-              <a className="color-blue font-bold! flex gap-2 justify-between items-center w-max" href={work.externalProjectLink} target="_blank">Fisit Site
+              <a className="max-md:hidden color-blue font-bold! flex gap-2 justify-between items-center w-max" href={work.externalProjectLink} target="_blank">Fisit Site
                 <svg className="rotate-180" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 12.5C2 12.8117 2.13746 13.1092 2.38488 13.35L9.47766 20.6458C9.72509 20.8867 10 21 10.2887 21C10.8935 21 11.3608 20.5325 11.3608 19.895C11.3608 19.5975 11.2646 19.3 11.0584 19.1017L9.16151 17.0758L5.24399 13.4492L7.9244 13.6475H20.9003C21.5464 13.6475 22 13.1658 22 12.5C22 11.8342 21.5464 11.3525 20.9003 11.3525H7.9244L5.25773 11.5508L9.16151 7.92417L11.0584 5.89833C11.2646 5.7 11.3608 5.4025 11.3608 5.105C11.3608 4.4675 10.8935 4 10.2887 4C10 4 9.72509 4.11333 9.47766 4.35417L2.38488 11.65C2.13746 11.8908 2 12.1883 2 12.5Z" fill="#1e2eb8" />
                 </svg>

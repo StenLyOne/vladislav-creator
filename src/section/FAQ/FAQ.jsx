@@ -58,7 +58,7 @@ const FAQ = () => {
 
   return (
     <section
-      className="space-y-[30px] mt-[100px] md:mt-[180px] md:mr-[30px]"
+      className="space-y-[30px] mt-[100px] md:mt-[180px] md:mx-[30px]"
       id="faq"
     >
       {!isMobile ? (
