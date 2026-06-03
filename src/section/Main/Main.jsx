@@ -88,7 +88,7 @@ const Main = ({ setIsOpen }) => {
               </div>
               <div className="flex justify-center w-full gap-[5px] mt-[50px] z-100 relative">
                 <div onClick={() => setIsOpen(true)}>
-                  <Button>Let’s start</Button>
+                  <Button>Get More Leads</Button>
                 </div>
                 <button
                   onClick={() => handleSmoothScroll("cases")}
