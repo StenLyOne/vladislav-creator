@@ -22,6 +22,8 @@ export async function POST(request) {
       return Response.json({ success: false, ignored: "bot" });
     }
 
+    const body = await request.json().catch(() => ({}));
+
     await fetch(`${SENDERBOT_BASE_URL}/visit`, {
       method: "POST",
       cache: "no-store",
@@ -31,6 +33,7 @@ export async function POST(request) {
       body: JSON.stringify({
         country,
         city,
+        page: body.page,
       }),
     });
 

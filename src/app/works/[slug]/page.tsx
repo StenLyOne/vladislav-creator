@@ -12,7 +12,6 @@ import type {
   WorkFrameworkSection,
   WorkMedia,
 } from "../../../data/works";
-import { useVisitTracking } from "../../../hooks/useVisitTracking";
 
 const CONTENT_TEXT_CLASS =
   "text-[14px] leading-[18px] font-semibold color-black normal-case text-balance";

@@ -1,9 +1,11 @@
 // hooks/useVisitTracking.ts
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export function useVisitTracking() {
+    const pathname = usePathname();
     useEffect(() => {
         let sent = false;
         let timer: ReturnType<typeof setTimeout> | null = null;
@@ -16,6 +18,9 @@ export function useVisitTracking() {
             timer = setTimeout(() => {
                 fetch("/api/visit", {
                     method: "POST",
+                    body: JSON.stringify({
+                        page: pathname
+                    })
                 });
             }, 5000);
         };
@@ -31,5 +36,5 @@ export function useVisitTracking() {
             window.removeEventListener("touchstart", sendVisit);
             window.removeEventListener("scroll", sendVisit);
         };
-    }, []);
+    }, [pathname]);
 }
