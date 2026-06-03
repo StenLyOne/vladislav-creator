@@ -8,21 +8,20 @@ export function useVisitTracking() {
     const pathname = usePathname();
     useEffect(() => {
         let sent = false;
-        let timer: ReturnType<typeof setTimeout> | null = null;
+   
 
         const sendVisit = () => {
             if (sent) return;
 
             sent = true;
 
-            timer = setTimeout(() => {
-                fetch("/api/visit", {
-                    method: "POST",
-                    body: JSON.stringify({
-                        page: pathname
-                    })
-                });
-            }, 5000);
+
+            fetch("/api/visit", {
+                method: "POST",
+                body: JSON.stringify({
+                    page: pathname
+                })
+            });
         };
 
         window.addEventListener("mousemove", sendVisit, { once: true });
@@ -30,8 +29,6 @@ export function useVisitTracking() {
         window.addEventListener("scroll", sendVisit, { once: true });
 
         return () => {
-            if (timer) clearTimeout(timer);
-
             window.removeEventListener("mousemove", sendVisit);
             window.removeEventListener("touchstart", sendVisit);
             window.removeEventListener("scroll", sendVisit);
