@@ -44,7 +44,7 @@ export interface LandingWork {
   img: string;
   imgMob: string;
   did?: string[];
-  
+
   results?: string[];
 }
 
@@ -66,7 +66,7 @@ const caseStudyBase: WorkCaseStudy[] = [
         media: [
           {
             type: "video",
-            url: "/assets/naka/naka.mp4",
+            url: "/assets/naka/naka-video.mp4",
           },
         ],
       },
