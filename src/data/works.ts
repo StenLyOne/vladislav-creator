@@ -58,77 +58,56 @@ const caseStudyBase: WorkCaseStudy[] = [
         id: "problems",
         title: "Problems",
         paragraphs: [
-          "NAKA sells complex fintech infrastructure, not a simple consumer product.",
-          "Partners need to understand card programs, stablecoin rails, payment acceptance, compliance, and self-custody without getting lost.",
-          "In a regulated financial category, trust has to be built before the user clicks anything.",
+          "Partners needed to quickly understand card programs, stablecoin rails, payment acceptance, compliance, and self-custody — without feeling like they had entered a technical maze.",
+          "In a regulated financial category, trust has to be built before the user clicks the CTA.",
           "The website needed to guide different partner types toward the right solution and a sales conversation.",
         ],
-        media: [
-          {
-            type: "video",
-            url: "/assets/naka/naka-video.mp4",
-          },
-        ],
+        media: {
+          type: "video",
+          url: "/assets/naka/naka-video.mp4",
+        },
       },
       {
         id: "insight",
         title: "Insight",
         paragraphs: [
-          "The product should be explained through business outcomes, not technical complexity.",
-          "Users need a clear path: what NAKA does, which solution fits them, why it is secure, and how to talk to the team.",
-          "Trust signals like compliance, security, partners, and infrastructure credibility are not secondary — they are part of conversion.",
+          "The product needed to be explained through business outcomes, not technical complexity.",
+          "Users needed a simple path: what NAKA does, which solution fits them, why they can trust it, and how to contact the team.",
+          "Trust signals — compliance, security, partners, and infrastructure credibility — are not secondary details, but part of conversion.",
           "The website had to work as a sales layer for a modular payment infrastructure product.",
         ],
-        media: [
-          {
-            type: "image",
-            url: "/assets/naka/1.png",
-          },
-          {
-            type: "image",
-            url: "/assets/naka/2.png",
-          },
-        ],
+        media: {
+          type: "image",
+          url: "/assets/naka/1.png",
+        },
       },
       {
         id: "decision",
         title: "Decision",
         paragraphs: [
-          "I structured the website around clear product pillars: card programs, stablecoin network design, payment acceptance, and modular infrastructure.",
+          "I structured the website around clear product directions: card programs, stablecoin network design, payment acceptance, and modular infrastructure.",
           "The homepage was built to explain NAKA in seconds: real-world payments powered by stablecoin-native infrastructure.",
-          "Use cases and solutions were separated so different partner types could quickly find their path.",
-          "Security, compliance, awards, and partner credibility were placed as trust-building blocks throughout the journey.",
+          "Use cases and solutions were separated so different partner types could find their path faster.",
+          "Security, compliance, awards, and partner credibility were built into the journey as trust blocks.",
           "The CTAs were focused on exploration and sales intent: Explore Payments and Talk to our team.",
         ],
-        media: [
-          {
-            type: "image",
-            url: "/assets/naka/3.png",
-          },
-          {
-            type: "image",
-            url: "/assets/naka/4.png",
-          },
-        ],
+        media: {
+          type: "image",
+          url: "/assets/naka/2.png",
+        },
       },
       {
         id: "after",
         title: "After",
         paragraphs: [
-          "The website became clearer, more credible, and easier to navigate for B2B fintech partners.",
-          "Users can understand the infrastructure, compare solution paths, and see why NAKA is trustworthy.",
-          "The site now supports both education and conversion: it explains the product while moving users toward a sales conversation.",
+          "The website became clearer, more convincing, and easier to navigate for B2B fintech partners.",
+          "Users can understand the infrastructure faster, compare solution paths, and see why NAKA feels like a trustworthy solution.",
+          "The website now supports both education and conversion: it explains the product while guiding users toward a sales conversation.",
         ],
-        media: [
-          {
-            type: "image",
-            url: "/assets/naka/5.png",
-          },
-          {
-            type: "image",
-            url: "/assets/naka/6.png",
-          },
-        ],
+        media: {
+          type: "image",
+          url: "/assets/naka/3.png",
+        },
       },
       {
         id: "business-value",
@@ -140,12 +119,10 @@ const caseStudyBase: WorkCaseStudy[] = [
           "Modular infrastructure messaging makes the product easier to sell to enterprise partners.",
           "Focused CTAs turn education into qualified sales conversations.",
         ],
-        media: [
-          {
-            type: "image",
-            url: "/assets/naka/7.png",
-          },
-        ],
+        media: {
+          type: "image",
+          url: "/assets/naka/4.png",
+        },
       },
     ],
     shortDescription:
@@ -268,7 +245,7 @@ const caseStudyBase: WorkCaseStudy[] = [
     slug: "hyfe-inc",
     title: "Hyfe Inc.",
     heroOutcomeTitle:
-      "Made a complex HealthTech website faster, clearer, and easier to navigate",
+      "B2B HealthTech website faster, clearer, and easier to navigate",
     frameworkSections: [
       {
         id: "before",
@@ -344,6 +321,106 @@ const caseStudyBase: WorkCaseStudy[] = [
       "Backend development",
     ],
     externalProjectLink: "https://hyfe.com/",
+  },
+  {
+    slug: "bbr-group",
+    title: "BBR Group",
+    heroOutcomeTitle: "From event portfolio to sales-ready agency website",
+    frameworkSections: [
+      {
+        id: "problems",
+        title: "Problems",
+        paragraphs: [
+          "BBR combines several directions: events, PR, digital, placemaking, owned events, and brand activations.",
+          "Because of this broad expertise, the website needed to quickly explain what the group does without becoming an overloaded service showcase.",
+          "Potential clients needed to quickly see the agency’s scale, project types, portfolio, and understand how BBR could help.",
+          "For an event and experiential agency, the website needed to do more than inform — it had to communicate brand energy and the feeling of real experience.",
+        ],
+        media: {
+          type: "video",
+          url: "/assets/bbr/bbr-video-1.mp4",
+        },
+      },
+      {
+        id: "insight",
+        title: "Insight",
+        paragraphs: [
+          "BBR needed to be presented through experience, scale, and real projects — not just a list of services.",
+          "Users needed a fast path: who BBR is, what they do, what projects they have delivered, and how to get in touch.",
+          "The portfolio had to work as proof of capability.",
+          "Owned events, services, and case studies needed to connect into one story: BBR creates experiences people remember and talk about.",
+        ],
+        media: {
+          type: "video",
+          url: "/assets/bbr/bbr-video-2.mp4",
+        },
+      },
+      {
+        id: "decision",
+        title: "Decision",
+        paragraphs: [
+          "I structured the website around a clear flow: mission, directions, owned events, services, portfolio, and contact.",
+          "The homepage was built to communicate BBR’s positioning as a strategy-led placemaking group from the first screen.",
+          "Services were separated into clear directions: Events, PR, and Digital.",
+          "The portfolio was used as a key trust layer to show the agency’s scale through real projects.",
+          "The contact flow was made direct: enquiry type, contact form, email, phone, and the office in The Rocks.",
+        ],
+        media: [
+          {
+            type: "image",
+            url: "/assets/bbr/1.png",
+          },
+          {
+            type: "image",
+            url: "/assets/bbr/2.png",
+          },
+        ],
+      },
+      {
+        id: "after",
+        title: "After",
+        paragraphs: [
+          "The website became clearer, more alive, and better aligned with BBR’s scale as an experiential / placemaking group.",
+          "Users can understand the agency’s directions faster, see the portfolio, and move to contact without unnecessary searching.",
+          "The new digital experience connects brand story, services, owned events, and portfolio into one sales-ready website.",
+        ],
+        media: [
+          {
+            type: "image",
+            url: "/assets/bbr/3.png",
+          },
+          {
+            type: "image",
+            url: "/assets/bbr/4.png",
+          },
+        ],
+      },
+      {
+        id: "business-value",
+        title: "Business value",
+        paragraphs: [
+          "A clearer structure helps potential clients understand BBR’s services faster.",
+          "A stronger portfolio builds trust through real projects and brand activations.",
+          "Separating Events, PR, and Digital makes the agency offer easier to sell.",
+          "Owned events strengthen BBR’s positioning as a creator of large-scale experiences, not just a contractor.",
+          "A direct contact flow helps turn interest into enquiries and sales conversations.",
+        ],
+        media: [
+          {
+            type: "image",
+            url: "/assets/bbr/5.png",
+          },
+        ],
+      },
+    ],
+    shortDescription:
+      "A corporate website for BBR Group Australia, focused on clear service communication, a stronger portfolio, trust, and a direct path to enquiry.",
+    category: "Corporate Website / Events & PR",
+    year: "2026",
+    clientName: "BBR Group Australia",
+    heroImage: "/assets/bbr/bbr-hero.png",
+    role: ["UX/UI Design", "Web design", "Web development"],
+    externalProjectLink: "https://bbr-group.com.au/",
   },
   {
     slug: "planiq",
@@ -520,6 +597,7 @@ const caseStudyBase: WorkCaseStudy[] = [
     ],
     externalProjectLink: "",
   },
+
   // {
   //   slug: "pidu",
   //   title: "Pidu",
@@ -640,20 +718,10 @@ const externalOnlyWorks: LandingWork[] = [
   },
   {
     title: "ResolveDTx",
-    description: "Innovative Smart Homes & Sustainable Technologies",
+    description: "B2B App Website & Sustainable Technologies",
     url: "https://www.resolvedtx.com/",
     img: "/assets/img/dtx.png",
     imgMob: "/assets/img/dtx.png",
-    did: [
-      "Developed a **[modern, minimalist design]** with smooth animations and elegant 2D elements",
-      "Focused on simplicity and clarity - no clutter, just a **[sleek and functional]** aesthetic",
-      "Fully optimized for all devices, with **[interactive elements]** to enhance user engagement",
-    ],
-    results: [
-      "Intuitive interface improved usability, making the site more engaging. **[Increased organic traffic]**",
-      "**[+35%]** in conversions due to well-structured navigation and strategic design triggers",
-      "The new design transformed the **[brand's online presence]**, positioning it as a more modern and tech-forward company",
-    ],
   },
 ];
 
