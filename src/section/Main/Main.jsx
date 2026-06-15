@@ -38,7 +38,7 @@ const Main = ({ setIsOpen }) => {
                 <p className="text-white brackets">(</p>
               </div>
               <div className="w-[80px] h-[80px] rounded-[100px] ">
-                <img src="/assets/img/I.png" alt="" />
+                <img src="/assets/img/I-1.png" alt="" />
               </div>
               <div className="">
                 <p className="text-white font-semibold">Human being</p>

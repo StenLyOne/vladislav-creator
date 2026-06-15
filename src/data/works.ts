@@ -49,179 +49,121 @@ export interface LandingWork {
 
 const caseStudyBase: WorkCaseStudy[] = [
   {
-    slug: "hyfe-inc",
-    title: "Hyfe Inc.",
+    slug: "Naka",
+    title: "Naka",
     heroOutcomeTitle:
-      "Made a complex HealthTech website faster, clearer, and easier to navigate",
-    frameworkSections: [
-      {
-        id: "before",
-        title: "Before",
-        paragraphs: [
-          "The old website was slow, overloaded, and outdated.",
-          "Users did not always understand what Hyfe does and often got lost in navigation.",
-          "News, publications, white papers, science content, and company materials were mixed together.",
-          "Because of the outdated UI, the product felt less trustworthy than the technology behind it.",
-        ],
-        media: [
-          { type: "image", url: "/assets/hyfe/Hyfe-old-1.png" },
-          { type: "image", url: "/assets/hyfe/Hyfe-old-2.png" },
-        ],
-      },
-      {
-        id: "insight",
-        title: "Insight",
-        paragraphs: [
-          "The problem was not the amount of content, but how users accessed it.",
-          "Resources needed to be split into two clear directions: company materials and science content.",
-          "When users find the right information faster, they drop less and explore the product deeper.",
-        ],
-        media: { type: "video", url: "/assets/hyfe/resources.mp4" },
-      },
-      {
-        id: "decision",
-        title: "Decision",
-        paragraphs: [
-          "I rebuilt the website around a clearer structure, faster loading, and a more premium visual style.",
-          "Resources were separated into company and science categories.",
-          "I added sheet previews so users could quickly open materials without losing context.",
-          "Relevant recommendations were added across the pages to guide users deeper into related content.",
-        ],
-        media: { type: "video", url: "/assets/hyfe/home.mp4" },
-      },
-      {
-        id: "after",
-        title: "After",
-        paragraphs: [
-          "The new website became faster, clearer, and easier to navigate.",
-          "Users can understand the product faster and find relevant resources with less friction.",
-          "The website now feels more mature, structured, and trustworthy for a HealthTech product.",
-        ],
-        media: [
-          { type: "image", url: "/assets/hyfe/google-insights-1.png" },
-          { type: "image", url: "/assets/hyfe/google-insights-2.png" },
-        ],
-      },
-      {
-        id: "business-value",
-        title: "Business value",
-        paragraphs: [
-          "Faster loading reduces early drop-offs.",
-          "Clear navigation helps users find the right content faster.",
-          "Separated resources make science and company materials easier to explore.",
-          "Recommendations increase the chance that users go deeper through the website.",
-          "Modern UI builds trust around a complex HealthTech product.",
-        ],
-        media: { type: "image", url: "/assets/hyfe/metrics.png" },
-      },
-    ],
-    shortDescription:
-      "HealthTech website redesign focused on performance, resource architecture, navigation clarity, and trust.",
-    category: "Corporate Website / HealthTech",
-    year: "2026",
-    clientName: "Hyfe Inc.",
-    heroImage: "/assets/img/hyfe.png",
-    role: [
-      "UX strategy",
-      "UI design",
-      "Frontend development",
-      "Backend development",
-    ],
-    externalProjectLink: "https://hyfe.com/",
-  },
-  {
-    slug: "flouer-app",
-    title: "Flouer",
-    heroOutcomeTitle:
-      "Improved purchase confidence by connecting discovery, checkout, and post-purchase care",
-    role: [
-      "UX strategy",
-      "UI design",
-      "Frontend development",
-      "Backend development",
-    ],
-    subtitle: "Plant marketplace and care companion mobile app",
-    shortDescription:
-      "Product concept and UX/UI for a mobile app that combines plant discovery, purchase, and post-purchase care.",
-    category: "Mobile App / Marketplace",
-    year: "2025",
-    clientName: "Flouer",
-    heroImage: "/assets/flouer/flouer.png",
-    overviewText:
-      "The concept solves a common ecommerce gap: buying a plant is easy, keeping it alive is not. The product combines shopping and guided care in one flow.",
+      "B2B fintech website for trust and conversion",
     frameworkSections: [
       {
         id: "problems",
         title: "Problems",
         paragraphs: [
-          "A plant marketplace has a weak retention loop if the experience ends at checkout.",
-          "Users do not always know which plant fits their room, lifestyle, or level of experience.",
-          "After purchase, people are often left alone with care: when to water, how to fertilize, and what to do next.",
-          "As a result, buying a plant feels easy, but keeping it alive becomes the user’s problem.",
+          "NAKA sells complex fintech infrastructure, not a simple consumer product.",
+          "Partners need to understand card programs, stablecoin rails, payment acceptance, compliance, and self-custody without getting lost.",
+          "In a regulated financial category, trust has to be built before the user clicks anything.",
+          "The website needed to guide different partner types toward the right solution and a sales conversation.",
         ],
         media: [
-          { type: "image", url: "/assets/flouer/problem.png" },
+          {
+            type: "video",
+            url: "/assets/naka/naka.mp4",
+          },
         ],
       },
       {
         id: "insight",
         title: "Insight",
         paragraphs: [
-          "The real value is not just selling a plant, but giving users a reason to return after purchase.",
-          "Users need to understand: this plant fits me, my room, and my ability to care for it.",
-          "When purchase is connected to a care plan, reminders, and tasks, confidence becomes much higher.",
-          "Care-based recommendations can also turn supplies into repeat purchases.",
+          "The product should be explained through business outcomes, not technical complexity.",
+          "Users need a clear path: what NAKA does, which solution fits them, why it is secure, and how to talk to the team.",
+          "Trust signals like compliance, security, partners, and infrastructure credibility are not secondary — they are part of conversion.",
+          "The website had to work as a sales layer for a modular payment infrastructure product.",
         ],
-        media: { type: "image", url: "/assets/flouer/insights.png" },
+        media: [
+          {
+            type: "image",
+            url: "/assets/naka/1.png",
+          },
+          {
+            type: "image",
+            url: "/assets/naka/2.png",
+          },
+        ],
       },
       {
         id: "decision",
         title: "Decision",
         paragraphs: [
-          "I designed a mobile app where marketplace and plant care work as one connected experience.",
-          "Onboarding collects room, experience level, light, humidity, and temperature.",
-          "Plant cards show not only the product, but also why it fits the user.",
-          "After purchase, the plant moves into My Garden, where the care plan, tasks, and reminders are activated.",
-          "Soil, fertilizer, pots, and accessories are recommended based on the plant and its care needs.",
+          "I structured the website around clear product pillars: card programs, stablecoin network design, payment acceptance, and modular infrastructure.",
+          "The homepage was built to explain NAKA in seconds: real-world payments powered by stablecoin-native infrastructure.",
+          "Use cases and solutions were separated so different partner types could quickly find their path.",
+          "Security, compliance, awards, and partner credibility were placed as trust-building blocks throughout the journey.",
+          "The CTAs were focused on exploration and sales intent: Explore Payments and Talk to our team.",
         ],
-        media: [{ type: "image", url: "/assets/flouer/decision.png" },
-          // { type: "video", url: "/assets/flouer/app-flow.mov" }
+        media: [
+          {
+            type: "image",
+            url: "/assets/naka/3.png",
+          },
+          {
+            type: "image",
+            url: "/assets/naka/4.png",
+          },
         ],
       },
       {
         id: "after",
         title: "After",
         paragraphs: [
-          "Users understand what to buy and why it fits them.",
-          "After purchase, the app keeps guiding the user through care.",
-          "Marketplace, My Garden, care tasks, and supplies became part of one connected product.",
+          "The website became clearer, more credible, and easier to navigate for B2B fintech partners.",
+          "Users can understand the infrastructure, compare solution paths, and see why NAKA is trustworthy.",
+          "The site now supports both education and conversion: it explains the product while moving users toward a sales conversation.",
         ],
-        media: [{ type: "image", url: "/assets/flouer/after.png" },
-          // { type: "video", url: "/assets/flouer/app-flow.mov" }
+        media: [
+          {
+            type: "image",
+            url: "/assets/naka/5.png",
+          },
+          {
+            type: "image",
+            url: "/assets/naka/6.png",
+          },
         ],
-
       },
       {
         id: "business-value",
         title: "Business value",
         paragraphs: [
-          "Personalized recommendations increase purchase confidence.",
-          "Care plans make the product more valuable than a regular plant store.",
-          "Post-purchase care gives users a reason to return to the app.",
-          "Supply recommendations create a path to repeat purchases.",
-          "The product can scale through new plants, rooms, care scenarios, and product categories.",
+          "Clear product pillars reduce confusion around a complex fintech offer.",
+          "Use-case navigation helps different partner types find the right solution faster.",
+          "Trust signals reduce hesitation in a regulated financial category.",
+          "Modular infrastructure messaging makes the product easier to sell to enterprise partners.",
+          "Focused CTAs turn education into qualified sales conversations.",
         ],
-        media: { type: "image", url: "/assets/flouer/business-value.png" },
+        media: [
+          {
+            type: "image",
+            url: "/assets/naka/7.png",
+          },
+        ],
       },
     ],
-    externalProjectLink: "",
+    shortDescription:
+      "A B2B fintech website for NAKA, focused on explaining stablecoin-native payment infrastructure, building trust, and guiding partners toward the right solution.",
+    category: "Corporate Website / FinTech",
+    year: "2026",
+    clientName: "Hyfe Inc.",
+    heroImage: "/assets/naka/Naka-main.png",
+    role: ["UX/UI Design", "Web design", "Web development"],
+    externalProjectLink: "https://naka.com/",
   },
   {
     slug: "happly",
     title: "Happly",
     heroOutcomeTitle:
       "Built a mood-based ecommerce experience that turns three products into bundles, subscriptions, and repeat purchases",
-    subtitle: "Mood-driven THC gummies ecommerce with subscription, bundle, and cart upsell mechanics",
+    subtitle:
+      "Mood-driven THC gummies ecommerce with subscription, bundle, and cart upsell mechanics",
     shortDescription:
       "A focused ecommerce experience for three functional gummy products: Socialize, Relax, and Sleep — built around mood selection, education, bundles, and subscribe-and-save.",
     category: "Fitness Product",
@@ -229,9 +171,16 @@ const caseStudyBase: WorkCaseStudy[] = [
     clientName: "Happly",
     heroImage: "/assets/happly/happly.png",
     overviewText:
-      "The goal was to make a small three-product catalog feel simple, trustworthy, and commercially stronger through mood-based discovery, product education, bundle logic, and subscription-driven repeat purchases.", externalProjectLink:
-      "https://gethapply.com/",
-    role: ["UX strategy", "UI design", "Ecommerce structure", "Cart optimization", "Subscription flow", "Product storytelling"],
+      "The goal was to make a small three-product catalog feel simple, trustworthy, and commercially stronger through mood-based discovery, product education, bundle logic, and subscription-driven repeat purchases.",
+    externalProjectLink: "https://gethapply.com/",
+    role: [
+      "UX strategy",
+      "UI design",
+      "Ecommerce structure",
+      "Cart optimization",
+      "Subscription flow",
+      "Product storytelling",
+    ],
     frameworkSections: [
       {
         id: "problems",
@@ -316,130 +265,342 @@ const caseStudyBase: WorkCaseStudy[] = [
     ],
   },
   {
-    slug: "planiq",
-    title: "PlanIQ",
-    heroOutcomeTitle: "Designed a B2B SaaS platform that helps teams manage projects, tasks, meetings, chats, and AI workflows in one place",
-    frameworkSections: [{
-      id: "before", title: "Before",
-      paragraphs: ["Project teams were losing context because tasks, chats, meetings, files, and schedules were managed across separate tools.", "Managers had to collect project updates manually from different channels before understanding the real project status.", "Team members had to switch between chats, boards, calendars, and meeting notes to understand what needed to be done next.", "Meeting decisions were easy to miss because they were disconnected from tasks, deadlines, and project progress.", "AI support was useful only as a general chat, but it was not connected to real project workflows."],
-      media: [{ type: "image", url: "/assets/planiq/before-1.png" }, { type: "image", url: "/assets/planiq/before-2.png" }]
-    },
-    {
-      id: "insight",
-      title: "Insight",
-      paragraphs: ["The main bottleneck was the gap between communication and execution.", "Project updates, task progress, meetings, and schedules needed to work as one connected workflow.", "AI needed access to project context so it could help with real actions: summarize meetings, identify risks, create updates, and suggest next steps.", "The product had to reduce manual coordination and make project status easier to understand at a glance."],
-      media: [{ type: "image", url: "/assets/planiq/ai-assistant.png" }, { type: "image", url: "/assets/planiq/ai-assistant-chat.png" }],
-
-    },
-    {
-      id: "decision",
-      title: "Decision",
-      paragraphs: ["I designed a dashboard that gives managers a quick overview of project status, active tasks, deadlines, team activity, and meeting notes.", "I created a kanban project board where teams can track tasks by status, priority, progress, assignees, files, and comments.", "I added an inbox flow so project discussions stay close to the work they affect.", "I designed video meeting and room chat screens to keep calls, participants, messages, and recordings inside the product.", "I created a calendar and scheduling flow so meetings and project timelines can be planned from the same workspace.", "I designed the AI assistant around practical project actions: risk analysis, meeting summaries, task updates, file search, translation, and audio chat."],
-      media: [{ type: "image", url: "/assets/planiq/dashboard.png" }, { type: "image", url: "/assets/planiq/projects.png" }],
-    },
-    {
-      id: "after",
-      title: "After",
-      paragraphs: ["Managers can review project health faster through dashboard metrics, task statistics, progress cards, and upcoming meetings.", "Team members can move from task planning to chat, meetings, and scheduling without losing project context.", "Meeting outcomes can be captured, discussed, and turned into project actions more easily.", "The AI assistant helps teams analyze risks, create updates, summarize information, and work with project files faster.", "The interface supports complex SaaS workflows while keeping the product clean, structured, and easy to scan."],
-      media: [{ type: "image", url: "/assets/planiq/inbox.png" }, { type: "image", url: "/assets/planiq/calendar.png" }]
-    },
-    {
-      id: "business-value",
-      title: "Business value",
-      paragraphs: ["Less time is wasted switching between separate tools.", "Managers get faster access to project status, risks, deadlines, and team activity.", "Teams get clearer ownership through task statuses, assignees, progress, files, and comments.", "Meetings become more useful because notes, recordings, chats, and next steps stay connected to the project.", "AI quick actions reduce repetitive work around summaries, updates, planning, and risk analysis.", "Reusable UI components make the SaaS product easier to scale with new modules and workflows."],
-      media: { type: "image", url: "/assets/planiq/business-value.png" }
-    }],
-    shortDescription: "B2B SaaS platform for project management, team communication, scheduling, meetings, and AI-assisted workflows.",
-    category: "B2B SaaS / Project Management / AI Workspace",
-    year: "2026",
-    clientName: "PlanIQ",
-    heroImage: "/assets/planiq/hero.png",
-    role: ["UX strategy", "Product design", "UI design", "Design system"],
-    externalProjectLink: ""
-  },
-  {
-    slug: "pidu",
-    title: "Pidu",
+    slug: "hyfe-inc",
+    title: "Hyfe Inc.",
     heroOutcomeTitle:
-      "Designed a gamified English learning app UI kit that makes daily practice feel easier, more engaging, and more rewarding",
+      "Made a complex HealthTech website faster, clearer, and easier to navigate",
     frameworkSections: [
       {
         id: "before",
         title: "Before",
         paragraphs: [
-          "Many language learning apps feel repetitive and hard to continue after the first motivation drop.",
-          "Users often lose interest when lessons feel too long, progress is unclear, and rewards are not visible enough.",
-          "The client wanted an English learning app that feels more like a game than homework.",
-          "The product needed a clear mobile UI system for lessons, practice, progress, rewards, challenges, and social competition."
+          "The old website was slow, overloaded, and outdated.",
+          "Users did not always understand what Hyfe does and often got lost in navigation.",
+          "News, publications, white papers, science content, and company materials were mixed together.",
+          "Because of the outdated UI, the product felt less trustworthy than the technology behind it.",
         ],
         media: [
-          { type: "image", url: "/assets/pidu/before.png" },
-        ]
+          { type: "image", url: "/assets/hyfe/Hyfe-old-1.png" },
+          { type: "image", url: "/assets/hyfe/Hyfe-old-2.png" },
+        ],
       },
       {
         id: "insight",
         title: "Insight",
         paragraphs: [
-          "The main challenge was keeping users motivated between lessons.",
-          "Short exercises reduce friction and make practice easier to start.",
-          "Progress, streaks, EXP, rewards, and leaderboards create a reason to return.",
-          "The app needed a repeatable learning loop: choose activity, complete task, get feedback, earn reward, continue progress."
+          "The problem was not the amount of content, but how users accessed it.",
+          "Resources needed to be split into two clear directions: company materials and science content.",
+          "When users find the right information faster, they drop less and explore the product deeper.",
         ],
-        media: { type: "image", url: "/assets/pidu/motivation-loop.png" }
+        media: { type: "video", url: "/assets/hyfe/resources.mp4" },
       },
       {
         id: "decision",
         title: "Decision",
         paragraphs: [
-          "I designed a playful mobile UI kit built around short learning sessions and clear visual feedback.",
-          "I created reusable exercise templates for guessing words, completing conversations, listening tasks, sentence rearrangement, and speaking practice.",
-          "I added gamification mechanics: EXP, streaks, gems, progress bars, leagues, challenges, and rewards.",
-          "I designed a character-driven visual system to make the app feel friendly, memorable, and easier to return to.",
-          "The UI kit was structured so new lessons, topics, activities, and game modes could be added without redesigning the whole product."
+          "I rebuilt the website around a clearer structure, faster loading, and a more premium visual style.",
+          "Resources were separated into company and science categories.",
+          "I added sheet previews so users could quickly open materials without losing context.",
+          "Relevant recommendations were added across the pages to guide users deeper into related content.",
         ],
-        media: { type: "image", url: "/assets/pidu/decision.png" }
+        media: { type: "video", url: "/assets/hyfe/home.mp4" },
       },
       {
         id: "after",
         title: "After",
         paragraphs: [
-          "The final UI kit turns English practice into a clear and repeatable mobile learning flow.",
-          "Users can choose an activity, complete short tasks, get instant feedback, earn EXP, and continue their progress.",
-          "The app supports both solo learning and social motivation through challenges, leagues, rooms, and leaderboards.",
-          "The design system gives the product a scalable foundation for future lessons, characters, rewards, and learning formats."
+          "The new website became faster, clearer, and easier to navigate.",
+          "Users can understand the product faster and find relevant resources with less friction.",
+          "The website now feels more mature, structured, and trustworthy for a HealthTech product.",
         ],
         media: [
-          { type: "image", url: "/assets/pidu/after-1.png" },
-          { type: "image", url: "/assets/pidu/after-2.png" }
-        ]
+          { type: "image", url: "/assets/hyfe/google-insights-1.png" },
+          { type: "image", url: "/assets/hyfe/google-insights-2.png" },
+        ],
       },
       {
         id: "business-value",
         title: "Business value",
         paragraphs: [
-          "Short lesson flows help users start practice faster.",
-          "Streaks, EXP, gems, and rewards create stronger reasons to return.",
-          "Reusable exercise templates reduce the time needed to add new learning content.",
-          "Leagues, challenges, and rooms increase social engagement inside the app.",
-          "A scalable UI kit makes the product easier to expand across new topics, levels, and activity types."
+          "Faster loading reduces early drop-offs.",
+          "Clear navigation helps users find the right content faster.",
+          "Separated resources make science and company materials easier to explore.",
+          "Recommendations increase the chance that users go deeper through the website.",
+          "Modern UI builds trust around a complex HealthTech product.",
         ],
-        media: { type: "image", url: "/assets/pidu/business-value.png" }
-      }
+        media: { type: "image", url: "/assets/hyfe/metrics.png" },
+      },
     ],
     shortDescription:
-      "Gamified mobile EdTech UI kit focused on English learning, short practice sessions, rewards, progress, challenges, and user retention.",
-    category: "Mobile App / EdTech / Gamification",
+      "HealthTech website redesign focused on performance, resource architecture, navigation clarity, and trust.",
+    category: "Corporate Website / HealthTech",
     year: "2026",
-    clientName: "Pidu",
-    heroImage: "/assets/pidu/hero.png",
+    clientName: "Hyfe Inc.",
+    heroImage: "/assets/img/hyfe.png",
     role: [
-      "Product design",
-      "Mobile UI design",
-      "Gamification",
-      "Design system"
+      "UX strategy",
+      "UI design",
+      "Frontend development",
+      "Backend development",
     ],
-    externalProjectLink: ""
-  }
+    externalProjectLink: "https://hyfe.com/",
+  },
+  {
+    slug: "planiq",
+    title: "PlanIQ",
+    heroOutcomeTitle:
+      "Designed a B2B SaaS platform that helps teams manage projects, tasks, meetings, chats, and AI workflows in one place",
+    frameworkSections: [
+      {
+        id: "before",
+        title: "Before",
+        paragraphs: [
+          "Project teams were losing context because tasks, chats, meetings, files, and schedules were managed across separate tools.",
+          "Managers had to collect project updates manually from different channels before understanding the real project status.",
+          "Team members had to switch between chats, boards, calendars, and meeting notes to understand what needed to be done next.",
+          "Meeting decisions were easy to miss because they were disconnected from tasks, deadlines, and project progress.",
+          "AI support was useful only as a general chat, but it was not connected to real project workflows.",
+        ],
+        media: [
+          { type: "image", url: "/assets/planiq/before-1.png" },
+          { type: "image", url: "/assets/planiq/before-2.png" },
+        ],
+      },
+      {
+        id: "insight",
+        title: "Insight",
+        paragraphs: [
+          "The main bottleneck was the gap between communication and execution.",
+          "Project updates, task progress, meetings, and schedules needed to work as one connected workflow.",
+          "AI needed access to project context so it could help with real actions: summarize meetings, identify risks, create updates, and suggest next steps.",
+          "The product had to reduce manual coordination and make project status easier to understand at a glance.",
+        ],
+        media: [
+          { type: "image", url: "/assets/planiq/ai-assistant.png" },
+          { type: "image", url: "/assets/planiq/ai-assistant-chat.png" },
+        ],
+      },
+      {
+        id: "decision",
+        title: "Decision",
+        paragraphs: [
+          "I designed a dashboard that gives managers a quick overview of project status, active tasks, deadlines, team activity, and meeting notes.",
+          "I created a kanban project board where teams can track tasks by status, priority, progress, assignees, files, and comments.",
+          "I added an inbox flow so project discussions stay close to the work they affect.",
+          "I designed video meeting and room chat screens to keep calls, participants, messages, and recordings inside the product.",
+          "I created a calendar and scheduling flow so meetings and project timelines can be planned from the same workspace.",
+          "I designed the AI assistant around practical project actions: risk analysis, meeting summaries, task updates, file search, translation, and audio chat.",
+        ],
+        media: [
+          { type: "image", url: "/assets/planiq/dashboard.png" },
+          { type: "image", url: "/assets/planiq/projects.png" },
+        ],
+      },
+      {
+        id: "after",
+        title: "After",
+        paragraphs: [
+          "Managers can review project health faster through dashboard metrics, task statistics, progress cards, and upcoming meetings.",
+          "Team members can move from task planning to chat, meetings, and scheduling without losing project context.",
+          "Meeting outcomes can be captured, discussed, and turned into project actions more easily.",
+          "The AI assistant helps teams analyze risks, create updates, summarize information, and work with project files faster.",
+          "The interface supports complex SaaS workflows while keeping the product clean, structured, and easy to scan.",
+        ],
+        media: [
+          { type: "image", url: "/assets/planiq/inbox.png" },
+          { type: "image", url: "/assets/planiq/calendar.png" },
+        ],
+      },
+      {
+        id: "business-value",
+        title: "Business value",
+        paragraphs: [
+          "Less time is wasted switching between separate tools.",
+          "Managers get faster access to project status, risks, deadlines, and team activity.",
+          "Teams get clearer ownership through task statuses, assignees, progress, files, and comments.",
+          "Meetings become more useful because notes, recordings, chats, and next steps stay connected to the project.",
+          "AI quick actions reduce repetitive work around summaries, updates, planning, and risk analysis.",
+          "Reusable UI components make the SaaS product easier to scale with new modules and workflows.",
+        ],
+        media: { type: "image", url: "/assets/planiq/business-value.png" },
+      },
+    ],
+    shortDescription:
+      "B2B SaaS platform for project management, team communication, scheduling, meetings, and AI-assisted workflows.",
+    category: "B2B SaaS / Project Management / AI Workspace",
+    year: "2026",
+    clientName: "PlanIQ",
+    heroImage: "/assets/planiq/hero.png",
+    role: ["UX strategy", "Product design", "UI design", "Design system"],
+    externalProjectLink: "",
+  },
+  {
+    slug: "flouer-app",
+    title: "Flouer",
+    heroOutcomeTitle:
+      "Improved purchase confidence by connecting discovery, checkout, and post-purchase care",
+    role: [
+      "UX strategy",
+      "UI design",
+      "Frontend development",
+      "Backend development",
+    ],
+    subtitle: "Plant marketplace and care companion mobile app",
+    shortDescription:
+      "Product concept and UX/UI for a mobile app that combines plant discovery, purchase, and post-purchase care.",
+    category: "Mobile App / Marketplace",
+    year: "2025",
+    clientName: "Flouer",
+    heroImage: "/assets/flouer/flouer.png",
+    overviewText:
+      "The concept solves a common ecommerce gap: buying a plant is easy, keeping it alive is not. The product combines shopping and guided care in one flow.",
+    frameworkSections: [
+      {
+        id: "problems",
+        title: "Problems",
+        paragraphs: [
+          "A plant marketplace has a weak retention loop if the experience ends at checkout.",
+          "Users do not always know which plant fits their room, lifestyle, or level of experience.",
+          "After purchase, people are often left alone with care: when to water, how to fertilize, and what to do next.",
+          "As a result, buying a plant feels easy, but keeping it alive becomes the user’s problem.",
+        ],
+        media: [{ type: "image", url: "/assets/flouer/problem.png" }],
+      },
+      {
+        id: "insight",
+        title: "Insight",
+        paragraphs: [
+          "The real value is not just selling a plant, but giving users a reason to return after purchase.",
+          "Users need to understand: this plant fits me, my room, and my ability to care for it.",
+          "When purchase is connected to a care plan, reminders, and tasks, confidence becomes much higher.",
+          "Care-based recommendations can also turn supplies into repeat purchases.",
+        ],
+        media: { type: "image", url: "/assets/flouer/insights.png" },
+      },
+      {
+        id: "decision",
+        title: "Decision",
+        paragraphs: [
+          "I designed a mobile app where marketplace and plant care work as one connected experience.",
+          "Onboarding collects room, experience level, light, humidity, and temperature.",
+          "Plant cards show not only the product, but also why it fits the user.",
+          "After purchase, the plant moves into My Garden, where the care plan, tasks, and reminders are activated.",
+          "Soil, fertilizer, pots, and accessories are recommended based on the plant and its care needs.",
+        ],
+        media: [
+          { type: "image", url: "/assets/flouer/decision.png" },
+          // { type: "video", url: "/assets/flouer/app-flow.mov" }
+        ],
+      },
+      {
+        id: "after",
+        title: "After",
+        paragraphs: [
+          "Users understand what to buy and why it fits them.",
+          "After purchase, the app keeps guiding the user through care.",
+          "Marketplace, My Garden, care tasks, and supplies became part of one connected product.",
+        ],
+        media: [
+          { type: "image", url: "/assets/flouer/after.png" },
+          // { type: "video", url: "/assets/flouer/app-flow.mov" }
+        ],
+      },
+      {
+        id: "business-value",
+        title: "Business value",
+        paragraphs: [
+          "Personalized recommendations increase purchase confidence.",
+          "Care plans make the product more valuable than a regular plant store.",
+          "Post-purchase care gives users a reason to return to the app.",
+          "Supply recommendations create a path to repeat purchases.",
+          "The product can scale through new plants, rooms, care scenarios, and product categories.",
+        ],
+        media: { type: "image", url: "/assets/flouer/business-value.png" },
+      },
+    ],
+    externalProjectLink: "",
+  },
+  // {
+  //   slug: "pidu",
+  //   title: "Pidu",
+  //   heroOutcomeTitle:
+  //     "Designed a gamified English learning app UI kit that makes daily practice feel easier, more engaging, and more rewarding",
+  //   frameworkSections: [
+  //     {
+  //       id: "before",
+  //       title: "Before",
+  //       paragraphs: [
+  //         "Many language learning apps feel repetitive and hard to continue after the first motivation drop.",
+  //         "Users often lose interest when lessons feel too long, progress is unclear, and rewards are not visible enough.",
+  //         "The client wanted an English learning app that feels more like a game than homework.",
+  //         "The product needed a clear mobile UI system for lessons, practice, progress, rewards, challenges, and social competition.",
+  //       ],
+  //       media: [{ type: "image", url: "/assets/pidu/before.png" }],
+  //     },
+  //     {
+  //       id: "insight",
+  //       title: "Insight",
+  //       paragraphs: [
+  //         "The main challenge was keeping users motivated between lessons.",
+  //         "Short exercises reduce friction and make practice easier to start.",
+  //         "Progress, streaks, EXP, rewards, and leaderboards create a reason to return.",
+  //         "The app needed a repeatable learning loop: choose activity, complete task, get feedback, earn reward, continue progress.",
+  //       ],
+  //       media: { type: "image", url: "/assets/pidu/motivation-loop.png" },
+  //     },
+  //     {
+  //       id: "decision",
+  //       title: "Decision",
+  //       paragraphs: [
+  //         "I designed a playful mobile UI kit built around short learning sessions and clear visual feedback.",
+  //         "I created reusable exercise templates for guessing words, completing conversations, listening tasks, sentence rearrangement, and speaking practice.",
+  //         "I added gamification mechanics: EXP, streaks, gems, progress bars, leagues, challenges, and rewards.",
+  //         "I designed a character-driven visual system to make the app feel friendly, memorable, and easier to return to.",
+  //         "The UI kit was structured so new lessons, topics, activities, and game modes could be added without redesigning the whole product.",
+  //       ],
+  //       media: { type: "image", url: "/assets/pidu/decision.png" },
+  //     },
+  //     {
+  //       id: "after",
+  //       title: "After",
+  //       paragraphs: [
+  //         "The final UI kit turns English practice into a clear and repeatable mobile learning flow.",
+  //         "Users can choose an activity, complete short tasks, get instant feedback, earn EXP, and continue their progress.",
+  //         "The app supports both solo learning and social motivation through challenges, leagues, rooms, and leaderboards.",
+  //         "The design system gives the product a scalable foundation for future lessons, characters, rewards, and learning formats.",
+  //       ],
+  //       media: [
+  //         { type: "image", url: "/assets/pidu/after-1.png" },
+  //         { type: "image", url: "/assets/pidu/after-2.png" },
+  //       ],
+  //     },
+  //     {
+  //       id: "business-value",
+  //       title: "Business value",
+  //       paragraphs: [
+  //         "Short lesson flows help users start practice faster.",
+  //         "Streaks, EXP, gems, and rewards create stronger reasons to return.",
+  //         "Reusable exercise templates reduce the time needed to add new learning content.",
+  //         "Leagues, challenges, and rooms increase social engagement inside the app.",
+  //         "A scalable UI kit makes the product easier to expand across new topics, levels, and activity types.",
+  //       ],
+  //       media: { type: "image", url: "/assets/pidu/business-value.png" },
+  //     },
+  //   ],
+  //   shortDescription:
+  //     "Gamified mobile EdTech UI kit focused on English learning, short practice sessions, rewards, progress, challenges, and user retention.",
+  //   category: "Mobile App / EdTech / Gamification",
+  //   year: "2026",
+  //   clientName: "Pidu",
+  //   heroImage: "/assets/pidu/hero.png",
+  //   role: [
+  //     "Product design",
+  //     "Mobile UI design",
+  //     "Gamification",
+  //     "Design system",
+  //   ],
+  //   externalProjectLink: "",
+  // },
 ];
 
 const externalOnlyWorks: LandingWork[] = [
@@ -460,23 +621,23 @@ const externalOnlyWorks: LandingWork[] = [
       "More inquiries & conversions - Improved structure and presentation resulted in a **[+28%]** increase in client requests",
     ],
   },
-  // {
-  //   title: "CMS",
-  //   description: "Real-time Cough Monitoring for Clinical Trials",
-  //   url: "https://www.coughmonitor.com/",
-  //   img: "/assets/img/cms.png",
-  //   imgMob: "/assets/img/cms.png",
-  //   did: [
-  //     "Full website redesign and development with a **[clinical, data-driven aesthetic]** aligned with medical standards",
-  //     "UX/UI built around **[clarity, reliability, and scientific communication]**, making complex tech easy to grasp",
-  //     "Structured presentation of the CoughMonitor Suite, highlighting **[workflow, validation data, and trial readiness]**",
-  //   ],
-  //   results: [
-  //     "Improved comprehension - Complex clinical technology is now explained through a **[clear, step-by-step UX flow]**",
-  //     "Higher engagement - Visitors interact more with validation data and workflow sections, increasing **[time on page by +31%]**",
-  //     "Stronger credibility - A professional, compliant visual identity reinforces CMS as a **[trusted clinical trial solution]**",
-  //   ],
-  // },
+  {
+    title: "CMS",
+    description: "Real-time Cough Monitoring for Clinical Trials",
+    url: "https://www.coughmonitor.com/",
+    img: "/assets/img/cms.png",
+    imgMob: "/assets/img/cms.png",
+    did: [
+      "Full website redesign and development with a **[clinical, data-driven aesthetic]** aligned with medical standards",
+      "UX/UI built around **[clarity, reliability, and scientific communication]**, making complex tech easy to grasp",
+      "Structured presentation of the CoughMonitor Suite, highlighting **[workflow, validation data, and trial readiness]**",
+    ],
+    results: [
+      "Improved comprehension - Complex clinical technology is now explained through a **[clear, step-by-step UX flow]**",
+      "Higher engagement - Visitors interact more with validation data and workflow sections, increasing **[time on page by +31%]**",
+      "Stronger credibility - A professional, compliant visual identity reinforces CMS as a **[trusted clinical trial solution]**",
+    ],
+  },
   {
     title: "ResolveDTx",
     description: "Innovative Smart Homes & Sustainable Technologies",
