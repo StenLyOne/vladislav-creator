@@ -44,6 +44,7 @@ export interface LandingWork {
   img: string;
   imgMob: string;
   did?: string[];
+  
   results?: string[];
 }
 
@@ -51,8 +52,7 @@ const caseStudyBase: WorkCaseStudy[] = [
   {
     slug: "Naka",
     title: "Naka",
-    heroOutcomeTitle:
-      "B2B fintech website for trust and conversion",
+    heroOutcomeTitle: "B2B fintech website for trust and conversion",
     frameworkSections: [
       {
         id: "problems",
