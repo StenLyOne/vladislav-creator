@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import path from "node:path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
+import sharp from "sharp";
 import {
   getRelatedWorks,
   getWorkCaseStudyBySlug,
@@ -15,10 +18,85 @@ import type {
 
 const CONTENT_TEXT_CLASS =
   "text-[14px] leading-[18px] font-semibold color-black normal-case text-balance";
+const PUBLIC_DIR = path.resolve(process.cwd(), "public");
+
+type ImageDimensions = {
+  width: number;
+  height: number;
+};
+
+const FALLBACK_IMAGE_DIMENSIONS: ImageDimensions = {
+  width: 1600,
+  height: 900,
+};
+
+type WorkMediaWithDimensions = WorkMedia & {
+  dimensions?: ImageDimensions | null;
+};
 
 type WorkPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+async function getLocalImageDimensions(
+  src: string
+): Promise<ImageDimensions | null> {
+  if (!src.startsWith("/") || src.startsWith("//")) {
+    return null;
+  }
+
+  const [pathname] = src.split(/[?#]/);
+  const filePath = path.resolve(PUBLIC_DIR, pathname.replace(/^\/+/, ""));
+
+  if (!filePath.startsWith(`${PUBLIC_DIR}${path.sep}`)) {
+    return null;
+  }
+
+  try {
+    const metadata = await sharp(filePath).metadata();
+
+    if (metadata.width && metadata.height) {
+      return {
+        width: metadata.width,
+        height: metadata.height,
+      };
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
+}
+
+function ResponsiveImage({
+  src,
+  alt,
+  className,
+  dimensions,
+  priority,
+  sizes,
+}: {
+  src: string;
+  alt: string;
+  className: string;
+  dimensions?: ImageDimensions | null;
+  priority?: boolean;
+  sizes: string;
+}) {
+  const imageDimensions = dimensions ?? FALLBACK_IMAGE_DIMENSIONS;
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      className={className}
+      width={imageDimensions.width}
+      height={imageDimensions.height}
+      priority={priority}
+      sizes={sizes}
+    />
+  );
+}
 
 export function generateStaticParams(): Array<{ slug: string }> {
   return getWorkCaseStudySlugs().map((slug) => ({ slug }));
@@ -189,19 +267,39 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
     notFound();
   }
 
-  const relatedWorks = getRelatedWorks(work.slug, 3);
   const allSections = buildFrameworkSections(work);
-  const visualSections = allSections
-    .filter(
-      (section) =>
-        section.id !== "key-areas" &&
-        section.id !== "role-team-tools" &&
-        section.id !== "role-tools"
-    )
-    .map((section) => ({
-      ...section,
-      mediaItems: getSectionMedia(section),
-    }));
+  const [heroImageDimensions, visualSections] = await Promise.all([
+    getLocalImageDimensions(work.heroImage),
+    Promise.all(
+      allSections
+        .filter(
+          (section) =>
+            section.id !== "key-areas" &&
+            section.id !== "role-team-tools" &&
+            section.id !== "role-tools"
+        )
+        .map(async (section) => {
+          const mediaItems: WorkMediaWithDimensions[] = await Promise.all(
+            getSectionMedia(section).map(async (media) => {
+              if (media.type !== "image") {
+                return media;
+              }
+
+              return {
+                ...media,
+                dimensions: await getLocalImageDimensions(media.url),
+              };
+            })
+          );
+
+          return {
+            ...section,
+            mediaItems,
+          };
+        })
+    ),
+  ]);
+  const relatedWorks = getRelatedWorks(work.slug, 3);
 
   const heroTitle = work.heroOutcomeTitle || work.subtitle || work.title;
   const roleLine = Array.isArray(work.role) ? work.role : [];
@@ -287,18 +385,21 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
               </article>
 
               <div className="overflow-hidden rounded-[10px] bg-white">
-                <img
+                <ResponsiveImage
                   src={work.heroImage}
                   alt={`${work.title} hero`}
                   className="h-[260px] md:h-full md:min-h-[420px] w-full object-cover"
+                  dimensions={heroImageDimensions}
+                  priority
+                  sizes="(min-width: 768px) 64vw, 100vw"
                 />
               </div>
             </div>
           </section>
 
           {visualSections.map((section) => (
-            <section key={section.id} className={`rounded-[10px] max-md:w-screen max-md:-translate-x-4 bg-bg max-md:px-4 max-md:pb-2   pt-[20px] md:p-[20px] md:p-[30px] space-y-[14px] ${section.mediaItems.length === 1 ? "md:flex gap-4" : ""}`}>
-              <article className={`space-y-[10px] w-full`}>
+            <section key={section.id} className={`rounded-[10px] max-md:w-screen max-md:-translate-x-4 bg-bg max-md:px-4 max-md:pb-2   pt-[20px] md:p-[20px] md:p-[30px] space-y-[14px] ${section.mediaItems.length === 1 ? "md:flex justify-between gap-4" : ""}`}>
+              <article className={`space-y-[10px] w-full ${section.mediaItems.length === 1 ? "min-md:w-1/2" : ""} `}>
                 <h3 className={CONTENT_TEXT_CLASS}>{section.title}</h3>
 
 
@@ -324,7 +425,7 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                 ) : null}
 
                 {section.richBullets ? (
-                  <div className="space-y-[8px] pt-[4px]">
+                  <div className="space-y-[8px] pt-[4px] ">
                     {section.richBullets.map((bullet, index) => (
                       <p key={`${section.id}-rich-${index}`} className={CONTENT_TEXT_CLASS}>
                         <span className="text-[14px] mr-[8px]">●</span>
@@ -351,10 +452,12 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                           loop
                         />
                       ) : (
-                        <img
+                        <ResponsiveImage
                           src={media.url}
                           alt={`${section.title} visual ${index + 1}`}
-                          className={` ${section.mediaItems.length > 1 ? " aspect-auto" : "aspect-auto "} bg-white h-full w-full object-cover`}
+                          className="aspect-auto bg-white h-full w-full object-cover"
+                          dimensions={media.dimensions}
+                          sizes="(min-width: 768px) 40vw, 100vw"
                         />
                       )}
                     </div>

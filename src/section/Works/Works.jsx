@@ -2,6 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import useIsMobile from "../../hooks/useIsMobile";
 import { landingWorks } from "../../data/works";
+import Image from "next/image";
 
 const Works = () => {
   const isMobile = useIsMobile();
@@ -31,10 +32,12 @@ const Works = () => {
             >
               <div className="relative overflow-hidden">
                 <div className="h-full md:h-[500px] md:min-h-[400px] xl:h-auto xl:min-h-full 2xl::h-auto">
-                  <img
+                  <Image
                     className="w-full h-full object-cover rounded-[10px]"
                     src={!isMobile ? work.img : work.imgMob}
                     alt={work.title}
+                    width={600}
+                    height={600}
                   />
                 </div>
               </div>
