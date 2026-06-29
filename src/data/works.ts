@@ -577,19 +577,22 @@ const caseStudyBase: WorkCaseStudy[] = [
           { type: "image", url: "/assets/planiq/calendar.png" },
         ],
       },
-      // {
-      //   id: "business-value",
-      //   title: "Business value",
-      //   paragraphs: [
-      //     "Less time is wasted switching between separate tools.",
-      //     "Managers get faster access to project status, risks, deadlines, and team activity.",
-      //     "Teams get clearer ownership through task statuses, assignees, progress, files, and comments.",
-      //     "Meetings become more useful because notes, recordings, chats, and next steps stay connected to the project.",
-      //     "AI quick actions reduce repetitive work around summaries, updates, planning, and risk analysis.",
-      //     "Reusable UI components make the SaaS product easier to scale with new modules and workflows.",
-      //   ],
-      //   media: { type: "image", url: "/assets/planiq/business-value.png" },
-      // },
+      {
+        id: "business-value",
+        title: "Business value",
+        paragraphs: [
+          "Less time is wasted switching between separate tools.",
+          "Managers get faster access to project status, risks, deadlines, and team activity.",
+          "Teams get clearer ownership through task statuses, assignees, progress, files, and comments.",
+          "Meetings become more useful because notes, recordings, chats, and next steps stay connected to the project.",
+          "AI quick actions reduce repetitive work around summaries, updates, planning, and risk analysis.",
+          "Reusable UI components make the SaaS product easier to scale with new modules and workflows.",
+        ],
+        media: [
+          { type: "image", url: "/assets/planiq/business-value.png" },
+        
+        ],
+      },
     ],
     shortDescription:
       "B2B SaaS platform for project management, team communication, scheduling, meetings, and AI-assisted workflows.",

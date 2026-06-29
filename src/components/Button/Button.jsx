@@ -1,7 +1,9 @@
+"use client";
+
 import "./Button.css";
 
 const buttonClassName =
-  "relative inline-block bg-blue color-blue p-[11px] px-[15px] rounded-[10px] button transition-all duration-200 overflow-hidden group";
+  "relative inline-flex min-h-[48px] items-center justify-center overflow-hidden rounded-[14px] bg-blue p-[11px] px-[16px] color-blue button shadow-[0_14px_28px_rgba(30,46,184,0.22)] transition-all duration-200 group hover:-translate-y-[1px] hover:shadow-[0_18px_36px_rgba(30,46,184,0.28)]";
 
 const ButtonContent = ({ children }) => (
   <>

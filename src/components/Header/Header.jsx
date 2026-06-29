@@ -1,172 +1,147 @@
-import { useState, useEffect } from "react";
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const navItems = [
+  { label: "Home", href: "/#home" },
+  { label: "Cases", href: "/#cases" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "About me", href: "/#about" },
+  { label: "FAQ", href: "/#faq" },
+];
+
+const contactMethods = [
+  { label: "Telegram", href: "https://t.me/StenLyOne" },
+  { label: "Gmail", href: "mailto:stenwlad@gmail.com" },
+  { label: "WhatsApp", href: "https://wa.me/+48600663072" },
+];
+
+const secondaryActionClass =
+  "inline-flex items-center justify-center rounded-full border border-[rgba(187,198,218,0.92)] bg-white px-[14px] py-[10px] text-[14px] leading-[18px] font-semibold color-black shadow-[0_10px_24px_rgba(19,19,19,0.05)] transition-all duration-300 hover:-translate-y-[1px] hover:border-[#1e2eb8] hover:text-[#1e2eb8]";
+
+const primaryActionClass =
+  "inline-flex items-center justify-center rounded-full bg-blue px-[16px] py-[10px] text-[14px] leading-[18px] font-semibold color-white shadow-[0_14px_28px_rgba(30,46,184,0.24)] transition-all duration-300 hover:-translate-y-[1px] hover:shadow-[0_18px_36px_rgba(30,46,184,0.28)]";
+
+const slidingPillClass =
+  "group relative inline-flex h-[34px] items-center justify-center overflow-hidden rounded-full border border-[rgba(187,198,218,0.92)] bg-white px-[12px] py-[6px] transition-all duration-300 hover:border-[#1e2eb8]";
+
+const SlidingPill = ({ href, label, accentClassName = "color-blue" }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className={slidingPillClass}>
+    <span className="opacity-0 whitespace-nowrap text-[14px] leading-[18px] font-semibold">
+      {label}
+    </span>
+    <span className="absolute inset-0 flex items-center justify-center text-[14px] leading-[18px] font-semibold color-black transition-transform duration-300 group-hover:-translate-y-full">
+      {label}
+    </span>
+    <span
+      className={`absolute inset-0 flex items-center justify-center text-[14px] leading-[18px] font-semibold transition-transform duration-300 translate-y-full group-hover:translate-y-0 ${accentClassName}`}
+    >
+      {label}
+    </span>
+  </a>
+);
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const contactMethods = ["Telegram", "Gmail", "WhatsApp"];
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
-  const handleSmoothScroll = (id) => {
-    const target = document.getElementById(id);
-    if (target) {
-      const offset = 150; // Дополнительный отступ вниз
-      const elementPosition =
-        target.getBoundingClientRect().top + window.scrollY;
-      const elementHeight = target.offsetHeight;
-      const offsetPosition =
-        elementPosition + elementHeight / 2 - window.innerHeight / 2 + offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-
-      setIsOpen(false);
-    }
-  };
-
   return (
-    <header className="fixed  flex w-full h-auto  z-50 md:h-screen">
-      <div className="h-[6.32vh] md:h-auto p-5 md:p-[30px] flex justify-between items-center md:flex-col md:items-start">
-        {/* Логотип */}
-        <h4 className="color-blue">
-          Vladislav.
-          <br className="hidden md:block xl:hidden" />
-          TheCreator
-        </h4>
+    <header className="fixed inset-x-0 top-0 z-[60] px-[16px] pt-[16px] md:px-[30px] md:pt-[20px]">
+      <div className="mx-auto max-w-[1920px] rounded-[22px] border border-[rgba(187,198,218,0.72)] bg-white/30 shadow-[0_18px_44px_rgba(19,19,19,0.08)] backdrop-blur-[18px]">
+        <div className="flex items-center justify-between gap-[16px] px-[16px] py-[14px] md:px-[24px]">
+          <Link href="/#home" className="shrink-0 color-blue">
+            <h4>
+              Vladislav.
+              <br className="hidden min-[1180px]:block" />
+              TheCreator
+            </h4>
+          </Link>
 
-        {/* Бургер-кнопка */}
-        {!isOpen ? (
-          <button
-            className="max-md:block hidden flex flex-col space-y-1 w-[24px] h-[24px]"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <div className="w-5 h-[2px] bg-black"></div>
-            <div className="w-5 h-[2px] bg-black"></div>
-            <div className="w-5 h-[2px] bg-black"></div>
-          </button>
-        ) : (
-          <button
-            className="color-black w-auto flex justify-end items-center gap-[8px]"
-            style={{ fontSize: "18px" }}
-            onClick={() => setIsOpen(false)}
-          >
-            Close
-            <span className="w-[16px] h-[16px]">
-              <img
-                className="w-[16px] h-[16px]"
-                src="/assets/img/closeBlack.svg"
-                alt=""
-              />
-            </span>
-          </button>
-        )}
-      </div>
-
-      {/* Меню */}
-      <nav
-        className={`absolute md:relative flex  items-start justify-center px-[16px] md:px-[0px] md:pt-[90px] md:pl-[30px] h-[93.62vh] md:h-max w-full md:w-full bg-white transition-transform duration-300 ease-in-out md:flex md:translate-y-0 ${
-          isOpen ? "translate-y-0" : "-translate-y-[-100%]"
-        }`}
-      >
-        <ul className="flex text-start  space-y-[20px] md:p-0 md:space-y-[5px] ">
-          {[
-            { label: "Home", link: "#home" },
-            { label: "Cases", link: "#cases" },
-            { label: "Testimonials", link: "#testimonials" },
-            {
-              label: "Services",
-              action: () => handleSmoothScroll("testimonials"),
-            },
-            { label: "About me", link: "#about" },
-            { label: "FAQ", link: "#faq" },
-            { label: "Contacts", link: "#contact" },
-          ].map((item, index) => (
-            <li key={index} className="header-link hover-link">
-              {item.link ? (
-                <a href={item.link} onClick={() => setIsOpen(false)}>
-                  {item.label}
-                </a>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => {
-                    item.action();
-                    setIsOpen(false);
-                  }}
-                  className="bg-transparent border-none p-0 m-0"
-                >
-                  {item.label}
-                </button>
-              )}
-            </li>
-          ))}
-        </ul>
-        <div className="w-full md:hidden space-y-[10px] md:space-y-[0px] items-center mt-[60px] mb-[30px] md:mt-[120px] md:mb-[60px]">
-          {/* Левая часть */}
-          <div className="w-full flex items-center justify-between space-x-[10px] min-w-max">
-            <p>You can contact me on</p>
-            <a
-              href="https://www.upwork.com/freelancers/~01e0b5eb4d34696c94"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="relative px-[10px] py-[4px] border rounded-full transition-all duration-200 border-green-600 overflow-hidden h-auto flex items-center justify-center group">
-                <p className="opacity-0 whitespace-nowrap"> Up Work</p>
-
-                <span className="absolute inset-0 color-green flex items-center justify-center color-black transition-transform duration-300 group-hover:-translate-y-full">
-                  Up Work
-                </span>
-
-                <span className="absolute inset-0 flex items-center justify-center color-green transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-                  Up Work
-                </span>
-              </button>
-            </a>
-          </div>
-
-          {/* Разделительная линия */}
-          <div className="flex-grow flex items-center px-[20px]">
-            <div className="flex-1 h-[1px] bg-stroke"></div>
-            <p className="color-stroke mx-[10px]">or</p>
-            <div className="flex-1 h-[1px] bg-stroke"></div>
-          </div>
-
-          {/* Правая часть */}
-          <div className="flex min-w-max">
-            {contactMethods.map((method) => (
-              <a
-                key={method}
-                href={
-                  method === "Telegram"
-                    ? "https://t.me/StenLyOne"
-                    : method === "Gmail"
-                    ? "mailto:stenwlad@gmail.com"
-                    : "https://wa.me/+48600663072"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  key={method}
-                  className="relative px-[12px] py-[6px] md:px-[10px] md:py-[4px] border rounded-full transition-all duration-200 hover:border-blue-800 overflow-hidden h-auto flex items-center justify-center group"
-                >
-                  <p className="opacity-0 whitespace-nowrap">{method}</p>
-
-                  <span className="absolute inset-0 flex items-center justify-center color-black transition-transform duration-300 group-hover:-translate-y-full">
-                    {method}
-                  </span>
-
-                  <span className="absolute inset-0 flex items-center justify-center color-blue transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-                    {method}
-                  </span>
-                </button>
-              </a>
+          <nav className="hidden xl:flex items-center gap-[22px] absolute left-1/2 -translate-x-1/2">
+            {navItems.map((item) => (
+              <Link key={item.label} href={item.href} className="header-link hover-link">
+                {item.label}
+              </Link>
             ))}
+          </nav>
+
+          <div className="hidden md:flex items-center gap-[10px]">
+            <Link href="/#cases" className={secondaryActionClass}>
+              View works
+            </Link>
+            <Link href="/#contact" className={primaryActionClass}>
+              Start a project
+            </Link>
           </div>
+
+          <button
+            type="button"
+            className="md:hidden inline-flex min-h-[40px] items-center justify-center rounded-full border border-[rgba(187,198,218,0.92)] bg-white px-[14px] py-[8px] text-[14px] leading-[18px] font-semibold color-black shadow-[0_8px_18px_rgba(19,19,19,0.05)]"
+            onClick={() => setIsOpen((open) => !open)}
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+          >
+            {isOpen ? "Close" : "Menu"}
+          </button>
         </div>
-      </nav>
+
+        {isOpen ? (
+          <div className="border-t border-[rgba(187,198,218,0.72)] px-[16px] pb-[16px] pt-[14px] md:hidden">
+            <nav className="grid gap-[8px]">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="rounded-[14px] bg-bg px-[14px] py-[12px] text-[18px] leading-[22px] font-semibold color-black transition-colors duration-200 hover:text-[#1e2eb8]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="mt-[14px] flex flex-wrap gap-[8px]">
+              <Link
+                href="/#cases"
+                className={secondaryActionClass}
+                onClick={() => setIsOpen(false)}
+              >
+                View works
+              </Link>
+              <Link
+                href="/#contact"
+                className={primaryActionClass}
+                onClick={() => setIsOpen(false)}
+              >
+                Start a project
+              </Link>
+            </div>
+
+            <div className="mt-[14px] flex flex-wrap gap-[8px]">
+              <SlidingPill
+                href="https://www.upwork.com/freelancers/~01e0b5eb4d34696c94"
+                label="Up Work"
+                accentClassName="color-green"
+              />
+              {contactMethods.map((method) => (
+                <SlidingPill
+                  key={method.label}
+                  href={method.href}
+                  label={method.label}
+                />
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
     </header>
   );
 };

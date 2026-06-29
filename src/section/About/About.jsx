@@ -272,8 +272,8 @@ const About = ({ setIsOpen }) => {
               className="space-y-[8px] color-blue"
               style={{ opacity: opacityIndicators1 }}
             >
-              <h2>5+</h2>
-              <p>Years in web design & development</p>
+              <h2>7+</h2>
+              <p>Years in UX/UI and Web Design, & Development</p>
             </motion.div>
             <motion.div
               className="space-y-[8px] color-blue"
@@ -286,7 +286,7 @@ const About = ({ setIsOpen }) => {
               className="space-y-[8px] color-blue"
               style={{ opacity: opacityIndicators3 }}
             >
-              <h2>10+</h2>
+              <h2>25+</h2>
               <p>Industries covered</p>
             </motion.div>
             <motion.div

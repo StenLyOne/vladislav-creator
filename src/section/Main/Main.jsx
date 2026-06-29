@@ -13,7 +13,7 @@ const Main = ({ setIsOpen }) => {
 
   return (
     <main
-      className="pt-[70px] px-[16px] md:px-[0px] md:pb-[90px] md:pt-[30px] pb-[100px] relative  overflow-hidden"
+      className="pt-[112px] px-[16px] md:px-[0px] md:pb-[90px] md:pt-[126px] pb-[100px] relative overflow-hidden"
       id="home"
     >
       <div className="absolute left-1/2 top-0 right-0 bottom-0 h-full  -translate-x-1/2 w-screen  pointer-events-none z-0">
@@ -29,20 +29,20 @@ const Main = ({ setIsOpen }) => {
 
       <div className="main-container relative z-[1]">
         <div className="space-y-[80px]">
-          <div>
-            <p className="text-white mx-auto text-center">/ / Avaliable for freelance work</p>
+          <div className="w-max mx-auto flex gap-3 justify-center items-center">
+            <span className="w-2 h-2 block rounded-full bg-green-500" />
+            <p className="text-white mx-auto text-center">Avaliable for freelance work</p>
           </div>
           <div className="md:space-y-[240px] flex flex-col items-center space-y-[180px]">
             <div className="flex items-center gap-[20px] z-1000">
               <div>
                 <p className="text-white brackets">(</p>
               </div>
-              <div className="w-[80px] h-[80px] rounded-[100px] ">
+              <div className="w-[80px] h-[80px] rounded-[100px] border-2 border-green-500">
                 <img src="/assets/img/I-1.png" alt="" />
               </div>
               <div className="">
-                <p className="text-white font-semibold">Human being</p>
-                <p className="text-white font-semibold">UX/UI designer</p>
+                <p className="text-white font-semibold">UX/UI & Web Designer</p>
                 <p className="text-white font-semibold">Full-stack developer</p>
               </div>
               <div>

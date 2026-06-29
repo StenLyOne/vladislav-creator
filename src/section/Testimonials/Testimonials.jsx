@@ -61,8 +61,8 @@ const services = [
     terms: "4 days+",
     description:
       "I create landing pages for any purpose: a product, a promo, an event, or a special project. Designed to convert and engage your audience.",
-    priceDesign: "700$",
-    priceDesignDev: "1400$",
+    priceDesign: "400$",
+    priceDesignDev: "700$",
     position: "top-0 left-10",
   },
   {

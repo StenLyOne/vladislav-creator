@@ -18,6 +18,12 @@ import type {
 
 const CONTENT_TEXT_CLASS =
   "text-[14px] leading-[18px] font-semibold color-black normal-case text-balance";
+const BODY_COPY_CLASS =
+  "text-[18px] leading-[136%] font-semibold color-black text-balance";
+const SECONDARY_ACTION_CLASS =
+  "inline-flex items-center justify-center rounded-full border border-[rgba(187,198,218,0.92)] bg-white px-[14px] py-[10px] text-[14px] leading-[18px] font-semibold color-black shadow-[0_10px_24px_rgba(19,19,19,0.05)] transition-all duration-300 hover:-translate-y-[1px] hover:border-[#1e2eb8] hover:text-[#1e2eb8]";
+const META_PILL_CLASS =
+  "inline-flex items-center justify-center rounded-full border border-[rgba(187,198,218,0.92)] bg-white px-[12px] py-[6px] text-[12px] leading-[16px] font-semibold color-grey";
 const PUBLIC_DIR = path.resolve(process.cwd(), "public");
 
 type ImageDimensions = {
@@ -306,45 +312,24 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
   const descriptionSummary = work.shortDescription || work.overviewText || "";
 
   return (
-    <main className="bg-white flex flex-col md:flex-row w-auto relative">
-      <div className="w-full h-auto md:w-1/5 z-[6] md:z-[9]">
-        <aside className="fixed md:w-[20%] w-full h-auto bg-white z-50 md:h-screen">
-          <div className="h-[6.32vh] md:h-auto p-5 md:p-[30px] flex justify-between items-center md:flex-col md:items-start">
-            <Link href="/" className="color-blue">
-              <h4>
-                Vladislav.
-                <br className="hidden md:block xl:hidden" />
-                TheCreator
-              </h4>
-            </Link>
-
-
-          </div>
-
-          <div className="flex flex-col px-[30px] md:pt-[90px] space-y-[10px] gap-2">
-            <Link href="/#cases" className="header-link flex justify-between items-center w-max gap-2 max-md:text-[14px]! max-md:tracking-[0px]!">
-              <svg className="rotate-" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 12.5C2 12.8117 2.13746 13.1092 2.38488 13.35L9.47766 20.6458C9.72509 20.8867 10 21 10.2887 21C10.8935 21 11.3608 20.5325 11.3608 19.895C11.3608 19.5975 11.2646 19.3 11.0584 19.1017L9.16151 17.0758L5.24399 13.4492L7.9244 13.6475H20.9003C21.5464 13.6475 22 13.1658 22 12.5C22 11.8342 21.5464 11.3525 20.9003 11.3525H7.9244L5.25773 11.5508L9.16151 7.92417L11.0584 5.89833C11.2646 5.7 11.3608 5.4025 11.3608 5.105C11.3608 4.4675 10.8935 4 10.2887 4C10 4 9.72509 4.11333 9.47766 4.35417L2.38488 11.65C2.13746 11.8908 2 12.1883 2 12.5Z" fill="#000" />
-              </svg>
+    <main className="bg-white">
+      <div className="mx-auto max-w-[1600px] px-[16px] pb-[100px] pt-[110px] md:px-[30px] md:pb-[120px] md:pt-[134px]">
+        <div className="space-y-[20px]">
+          <div className="flex flex-col gap-[12px] md:flex-row md:items-center md:justify-between">
+            <Link href="/#cases" className={SECONDARY_ACTION_CLASS}>
               Back to works
             </Link>
-            {work.externalProjectLink ? (
-              <a className="max-md:hidden color-blue font-bold! flex gap-2 justify-between items-center w-max" href={work.externalProjectLink} target="_blank">Fisit Site
-                <svg className="rotate-180" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 12.5C2 12.8117 2.13746 13.1092 2.38488 13.35L9.47766 20.6458C9.72509 20.8867 10 21 10.2887 21C10.8935 21 11.3608 20.5325 11.3608 19.895C11.3608 19.5975 11.2646 19.3 11.0584 19.1017L9.16151 17.0758L5.24399 13.4492L7.9244 13.6475H20.9003C21.5464 13.6475 22 13.1658 22 12.5C22 11.8342 21.5464 11.3525 20.9003 11.3525H7.9244L5.25773 11.5508L9.16151 7.92417L11.0584 5.89833C11.2646 5.7 11.3608 5.4025 11.3608 5.105C11.3608 4.4675 10.8935 4 10.2887 4C10 4 9.72509 4.11333 9.47766 4.35417L2.38488 11.65C2.13746 11.8908 2 12.1883 2 12.5Z" fill="#1e2eb8" />
-                </svg>
-              </a>
-            ) : null}
-          </div>
-        </aside>
-      </div>
 
-      <div className="md:w-4/5 z-[5] md:z-[10]">
-        <div className="pt-[80px] md:pt-[30px] px-[16px] md:px-[0px] md:pr-[30px] pb-[100px] space-y-[20px]">
+            <div className="flex flex-wrap gap-[8px]">
+              <span className={META_PILL_CLASS}>Case study</span>
+              <span className={META_PILL_CLASS}>{work.category}</span>
+              <span className={META_PILL_CLASS}>{work.year}</span>
+            </div>
+          </div>
+
           <section className="space-y-[20px] rounded-[10px] bg-bg p-[20px] md:space-y-[30px] md:p-[30px] ">
             <div className="space-y-[10px]">
-              <h1 className={CONTENT_TEXT_CLASS}>{heroTitle}</h1>
-              {/* <p className={CONTENT_TEXT_CLASS}>{heroTags.join(" / ")}</p> */}
+              <h1 className="max-w-[980px] color-black text-balance">{heroTitle}</h1>
             </div>
 
             <div className="grid gap-[12px] md:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)]">
@@ -355,6 +340,13 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                   </p>
                   {roleLine.map((e, i) => (
                     <p key={i} className={CONTENT_TEXT_CLASS}>{e}</p>))}
+                </div>
+
+                <div className="space-y-[6px]">
+                  <p className="text-[12px] leading-[16px] font-semibold color-grey normal-case">
+                    Client
+                  </p>
+                  <p className={CONTENT_TEXT_CLASS}>{work.clientName}</p>
                 </div>
 
                 <div className="space-y-[6px]">
@@ -378,7 +370,7 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Visit Site
+                      Visit site
                     </Button>
                   </div>
                 ) : null}
@@ -399,14 +391,14 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
 
           {visualSections.map((section) => (
             <section key={section.id} className={`rounded-[10px] max-md:w-screen max-md:-translate-x-4 bg-bg max-md:px-4 max-md:pb-2   pt-[20px] md:p-[20px] md:p-[30px] space-y-[14px] ${section.mediaItems.length === 1 ? "md:flex justify-between gap-4" : ""}`}>
-              <article className={`space-y-[10px] w-full ${section.mediaItems.length === 1 ? "min-md:w-1/2" : ""} `}>
-                <h3 className={CONTENT_TEXT_CLASS}>{section.title}</h3>
+              <article className={`space-y-[10px] w-full ${section.mediaItems.length === 1 ? "md:w-1/2 aspect-auto" : ""} `}>
+                <h3 className="color-black text-balance">{section.title}</h3>
 
 
                 {section.paragraphs?.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className="text-[18px]! leading-[136%]! text-balance"
+                    className={BODY_COPY_CLASS}
                   >
                     <span className=" mr-[8px] color-blue">●</span>
                     {paragraph}
@@ -437,7 +429,7 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
               </article>
 
               {section.mediaItems.length ? (
-                <div className={`grid  md:gap-[12px] max-md:w-screen max-md:-translate-x-4.5  ${section.mediaItems.length > 1 ? " md:grid-cols-2" : " md:max-w-1/2"} `}>
+                <div className={`grid md:gap-[12px] max-md:w-screen max-md:-translate-x-4 ${section.mediaItems.length > 1 ? "md:grid-cols-2" : "md:max-w-[50%]"} `}>
                   {section.mediaItems.map((media, index) => (
                     <div
                       key={`${section.id}-${media.url}-${index}`}
@@ -455,7 +447,7 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                         <ResponsiveImage
                           src={media.url}
                           alt={`${section.title} visual ${index + 1}`}
-                          className="aspect-auto bg-white h-full w-full object-cover"
+                          className="aspect-auto bg-white w-full object-cover"
                           dimensions={media.dimensions}
                           sizes="(min-width: 768px) 40vw, 100vw"
                         />
@@ -467,12 +459,10 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
             </section>
           ))}
 
-
-
           <section className="space-y-[16px] rounded-[10px] bg-white md:space-y-[20px] mt-10">
-            <div className="flex items-center justify-between">
-              <h3 className={CONTENT_TEXT_CLASS}>Related works</h3>
-              <Link href="/#cases" className="hover-link font-medium">
+            <div className="flex flex-col gap-[12px] md:flex-row md:items-center md:justify-between">
+              <h3 className="color-black text-balance">Related works</h3>
+              <Link href="/#cases" className={SECONDARY_ACTION_CLASS}>
                 Return to all projects
               </Link>
             </div>
@@ -487,7 +477,7 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                   <img
                     src={relatedWork.heroImage}
                     alt={relatedWork.title}
-                    className="h-[200px] w-full rounded-[8px] object-cover"
+                    className="aspect-square w-full rounded-[8px] object-cover"
                   />
                   <div className="space-y-[4px] px-[4px] pb-[6px]">
                     <h4 className={CONTENT_TEXT_CLASS}>{relatedWork.title}</h4>
