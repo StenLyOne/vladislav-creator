@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "../../components/Button/Button";
 import useIsMobile from "../../hooks/useIsMobile";
+import Image from "next/image";
 
 const About = ({ setIsOpen }) => {
   const sectionRef = useRef(null);
@@ -192,9 +193,8 @@ const About = ({ setIsOpen }) => {
   return (
     <section
       ref={sectionRef}
-      className={`relative w-full rounded-[10px] ${
-        isMobile ? "min-h-[300vh]" : "min-h-[1000vh]"
-      }`}
+      className={`relative w-full rounded-[10px] ${isMobile ? "min-h-[300vh]" : "min-h-[1000vh]"
+        }`}
       id="about"
     >
       <div className="md:sticky top-0 md:h-[100vh] w-auto overflow-hidden ">
@@ -256,14 +256,15 @@ const About = ({ setIsOpen }) => {
                 alt=""
               /> */}
               <div className="w-full h-full object-cover rounded-[10px]">
-                <video
+                {/* <video
                   src="/assets/video/video.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="w-full h-full object-cover rounded-[10px]"
-                ></video>
+                ></video> */}
+                <Image src={'/assets/img/i2.png'} alt="i" width={400} height={400}       className="w-full h-full object-cover rounded-[10px]"></Image>
               </div>
             </motion.div>
           </div>
@@ -271,7 +272,7 @@ const About = ({ setIsOpen }) => {
             <motion.div
               className="space-y-[8px] color-blue"
               style={{ opacity: opacityIndicators1 }}
-            > 
+            >
 
 
               <h2>2.4x</h2>
@@ -301,7 +302,7 @@ const About = ({ setIsOpen }) => {
           </div>
           <div
             className="flex flex-col justify-center items-start px-[16px] md:px-[0px] md:items-center z-0 w-[100vw]"
-            // style={{ x: xTransformBlock2 }}
+          // style={{ x: xTransformBlock2 }}
           >
             <div className="text-start space-y-[40px] md:space-y-[60px]">
               <motion.div
@@ -310,11 +311,9 @@ const About = ({ setIsOpen }) => {
               >
                 <h3 className="uppercase color-black">Me + My Process</h3>
                 <p>
-                  I work independently, but every project is built on a solid
-                  foundation of
+                  I work independently, combining strategy, design, and development to create digital products,
                   <br className="hidden min-[380px]:block" />
-                  strategy, design, and technology to create impactful
-                  solutions.
+                  websites, and interfaces that look strong, feel intuitive, and support business goals.
                 </p>
               </motion.div>
               <div className="space-y-[20px]">
@@ -329,8 +328,7 @@ const About = ({ setIsOpen }) => {
                   <div className="space-x-[39px] flex">
                     <p className="">01</p>
                     <p className="">
-                      I craft digital experiences that are visually striking and
-                      highly functional.
+                      I start by understanding the user journey, business goals, and what the product needs to achieve.
                     </p>
                   </div>
                 </motion.div>
@@ -345,8 +343,7 @@ const About = ({ setIsOpen }) => {
                   <div className="space-x-[39px] flex">
                     <p className="">02</p>
                     <p className="">
-                      Every project is built with a deep focus on user
-                      experience and business goals.
+                      I design clean, structured interfaces that are easy to understand, responsive, and converts.
                     </p>
                   </div>
                 </motion.div>
@@ -361,8 +358,7 @@ const About = ({ setIsOpen }) => {
                   <div className="space-x-[39px] flex">
                     <p className="">03</p>
                     <p className="">
-                      I design, develop, and refine websites that don’t just
-                      look good – they work.
+                      I develop, refine, and optimize digital experiences so they don’t just look good - they work.
                     </p>
                   </div>
                 </motion.div>
@@ -371,7 +367,7 @@ const About = ({ setIsOpen }) => {
           </div>
           <div
             className="flex flex-col justify-center px-[16px] my-[120px] md:my-[0px] md:px-[0px] items-start md:items-center z-[0] w-[100vw]"
-            // style={{ x: xTransformBlock3 }}
+          // style={{ x: xTransformBlock3 }}
           >
             <div className="space-y-[30px]">
               <div className="w-full md:w-[430px] h-[460px] md:h-[480px] ">
@@ -446,7 +442,7 @@ const About = ({ setIsOpen }) => {
           </div>
           <div
             className="flex flex-col justify-center px-[16px] md:px-[0px] items-start md:items-center z-[0] w-[100vw]"
-            // style={{ x: xTransformBlock4 }}
+          // style={{ x: xTransformBlock4 }}
           >
             <div className="space-y-[30px]">
               <div className="space-y-[50px]">
@@ -502,8 +498,7 @@ const About = ({ setIsOpen }) => {
                     >
                       <h4 className="color-blue">04. Growth & Scalability</h4>
                       <p className="color-grey">
-                        Websites designed to evolve, adapt, and scale as your
-                        business expands.
+                        Digital products designed to evolve, adapt, and scale as your business expands.
                       </p>
                     </motion.div>
                   </div>
@@ -513,7 +508,7 @@ const About = ({ setIsOpen }) => {
           </div>
           <div
             className="flex flex-col justify-center items-center py-[120px] md:py-[0px] z-[0] w-[100vw]"
-            // style={{ x: xTransformBlock5 }}
+          // style={{ x: xTransformBlock5 }}
           >
             <div className="space-y-[10px]">
               <div className="w-[270px] max-h-[360px] h-full">

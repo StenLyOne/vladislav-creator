@@ -47,7 +47,7 @@ export default function WorkFooter() {
               </h4>
             </Link>
             <h4 className="max-w-[560px] text-[18px] leading-[136%] font-semibold color-black text-balance">
-              Need a product website, UX flow, or frontend build that feels sharp and sells clearly?
+              Need a product website, UX flow, or development build that feels sharp and sells clearly?
             </h4>
           </div>
 

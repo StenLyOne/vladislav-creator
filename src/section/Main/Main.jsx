@@ -13,7 +13,7 @@ const Main = ({ setIsOpen }) => {
 
   return (
     <main
-      className="pt-[112px] md:pb-[90px] md:pt-[126px] pb-[100px] relative overflow-hidden"
+      className="pt-[112px] px-[16px] md:px-[0px] md:pb-[90px] md:pt-[126px] pb-[100px] relative overflow-hidden"
       id="home"
     >
       <div className="absolute left-1/2 top-0 right-0 bottom-0 h-full  -translate-x-1/2 w-screen  pointer-events-none z-0">
@@ -56,7 +56,7 @@ const Main = ({ setIsOpen }) => {
                   <div className="light-ray z-100 rotate-149 -bottom-40 -left-110"></div>
                   <div className="light-ray z-100 rotate-149 -bottom-40 -left-80"></div>
                   <img src={"/assets/hero/flash-1.png"} className="absolute  z-3 min-w-[307px] w-full min-h-[137px]  -bottom-15 -left-5" alt="flash" />
-                  <div className="min-w-[463px] min-h-[400px] z-1 bg-white blur-[150px] -bottom-60 -left-20 absolute rounded-2xl"></div>
+                  <div className="min-w-[463px] min-h-[400px] z-101 bg-white blur-[150px] -bottom-60 -left-20 absolute rounded-2xl"></div>
                 </div>
 
                 <div className="relative w-[200px] h-1 z-100  max-md:hidden ">
@@ -64,7 +64,7 @@ const Main = ({ setIsOpen }) => {
                   <div className="light-ray z-100 rotate-30 -bottom-40 -right-60"></div>
                   <div className="light-ray z-100 rotate-35 -bottom-40 -right-110"></div>
                   <img src={"/assets/hero/flash.png"} className="absolute z-3 blur-[15px] min-w-[492px] min-h-[159px] -bottom-15 right-0" alt="flash" />
-                  <div className="min-w-[463px] z-1 min-h-[400px] bg-white blur-[150px] -bottom-80 right-0 absolute rounded-2xl"></div>
+                  <div className="min-w-[463px] z-101 min-h-[400px] bg-white blur-[150px] -bottom-80 right-0 absolute rounded-2xl"></div>
                 </div>
 
               </div>
