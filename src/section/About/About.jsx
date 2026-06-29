@@ -271,30 +271,32 @@ const About = ({ setIsOpen }) => {
             <motion.div
               className="space-y-[8px] color-blue"
               style={{ opacity: opacityIndicators1 }}
-            >
-              <h2>7+</h2>
-              <p>Years in UX/UI and Web Design, & Development</p>
+            > 
+
+
+              <h2>2.4x</h2>
+              <p>more inquiries</p>
             </motion.div>
             <motion.div
               className="space-y-[8px] color-blue"
               style={{ opacity: opacityIndicators2 }}
             >
-              <h2>100+</h2>
-              <p>Projects successfully delivered</p>
+              <h2>100</h2>
+              <p>PageSpeed score</p>
             </motion.div>
             <motion.div
               className="space-y-[8px] color-blue"
               style={{ opacity: opacityIndicators3 }}
             >
-              <h2>25+</h2>
-              <p>Industries covered</p>
+              <h2>12%</h2>
+              <p>increase in form submissions</p>
             </motion.div>
             <motion.div
               className="space-y-[8px] color-blue"
               style={{ opacity: opacityIndicators4 }}
             >
-              <h2>$500K+</h2>
-              <p>Revenue generated for clients</p>
+              <h2 className="whitespace-nowrap">Fully green</h2>
+              <p>Core Web Vitals</p>
             </motion.div>
           </div>
           <div

@@ -13,7 +13,7 @@ const Main = ({ setIsOpen }) => {
 
   return (
     <main
-      className="pt-[112px] px-[16px] md:px-[0px] md:pb-[90px] md:pt-[126px] pb-[100px] relative overflow-hidden"
+      className="pt-[112px] md:pb-[90px] md:pt-[126px] pb-[100px] relative overflow-hidden"
       id="home"
     >
       <div className="absolute left-1/2 top-0 right-0 bottom-0 h-full  -translate-x-1/2 w-screen  pointer-events-none z-0">

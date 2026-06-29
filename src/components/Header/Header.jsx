@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -44,6 +45,7 @@ const SlidingPill = ({ href, label, accentClassName = "color-blue" }) => (
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname()
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -55,7 +57,7 @@ const Header = () => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-[60] px-[16px] pt-[16px] md:px-[30px] md:pt-[20px]">
-      <div className="mx-auto max-w-[1920px] rounded-[22px] border border-[rgba(187,198,218,0.72)] bg-white/30 shadow-[0_18px_44px_rgba(19,19,19,0.08)] backdrop-blur-[18px]">
+      <div className={`mx-auto ${path === "/" ?  "max-w-[1920px]" : "max-w-[1340px]"} rounded-[22px] border border-[rgba(187,198,218,0.72)] bg-white/30 shadow-[0_18px_44px_rgba(19,19,19,0.08)] backdrop-blur-[18px]`}>
         <div className="flex items-center justify-between gap-[16px] px-[16px] py-[14px] md:px-[24px]">
           <Link href="/#home" className="shrink-0 color-blue">
             <h4>

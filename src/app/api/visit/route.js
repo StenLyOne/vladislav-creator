@@ -13,6 +13,10 @@ export async function POST(request) {
     const city = request.headers.get("x-vercel-ip-city") || "Unknown";
     const ua = request.headers.get("user-agent")?.toLowerCase() || "";
 
+    if (country === "PL") {
+      return Response.json({ success: false, ignored: "PL" });
+    }
+
     const isBot =
       /bot|crawler|spider|crawling|lighthouse|pagespeed|headless|puppeteer|playwright|facebookexternalhit|whatsapp|telegrambot|slackbot|discordbot|skypeuripreview|googlebot|bingbot|yandexbot|duckduckbot|baiduspider|gptbot|claudebot|perplexitybot/i.test(
         ua,

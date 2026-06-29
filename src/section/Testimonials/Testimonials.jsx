@@ -236,7 +236,7 @@ const Testimonials = () => {
 
           {/* Горизонтальный скролл отзывов */}
           <motion.div
-            className="absolute w-full left-[0px] h-full flex items-center space-x-[16px] md:space-x-[0px] px-10"
+            className="absolute w-full left-[0px] h-full flex items-center space-x-[16px] md:space-x-[0px]"
             style={
               isMobile
                 ? { y: xTransformTestimonials, opacity: opacityTestimonials }
@@ -341,7 +341,7 @@ const Testimonials = () => {
             ))}
           </motion.div>
           <motion.div
-            className="absolute left-[0px] w-full h-[200%] md:flex items-center space-y-[140px] md:space-x-10 px-[16px] md:px-10"
+            className="absolute left-[0px] w-full h-[200%] md:flex items-center space-y-[140px] md:space-x-10"
             style={{ y: xTransformServices }}
             id="services"
           >

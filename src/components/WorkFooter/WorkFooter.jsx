@@ -35,23 +35,23 @@ function SlidingPill({ href, label, accentClassName = "color-blue" }) {
 
 export default function WorkFooter() {
   return (
-    <footer className="bg-white px-[16px] pb-[30px] md:px-[30px] md:pb-[40px]">
-      <div className="mx-auto max-w-[1600px] rounded-[24px] bg-bg p-[20px] md:p-[30px]">
+    <footer className="bg-white  pb-[30px]  md:pb-[40px] px-4 md:px-8">
+      <div className="mx-auto  max-w-[1340px] rounded-[24px] bg-bg p-[20px] md:p-[30px]">
         <div className="flex flex-col gap-[24px] md:flex-row md:items-end md:justify-between">
           <div className="space-y-[14px]">
-            <Link href="/#home" className="color-blue">
+            <Link href="/#home" className="color-blue block">
               <h4>
                 Vladislav.
                 <br className="hidden md:block" />
                 TheCreator
               </h4>
             </Link>
-            <p className="max-w-[560px] text-[18px] leading-[136%] font-semibold color-black text-balance">
+            <h4 className="max-w-[560px] text-[18px] leading-[136%] font-semibold color-black text-balance">
               Need a product website, UX flow, or frontend build that feels sharp and sells clearly?
-            </p>
+            </h4>
           </div>
 
-          <div className="flex flex-col gap-[12px] md:items-end">
+          <div className="flex h-full flex-1 flex-col gap-[12px] md:items-end">
             <div className="flex flex-wrap gap-[10px]">
               <Link href="/#cases" className={secondaryActionClass}>
                 Back to works
@@ -61,7 +61,7 @@ export default function WorkFooter() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap gap-[8px]">
+            <div className="flex min-h-0 flex-1 flex-wrap content-end gap-[8px]">
               <SlidingPill
                 href="https://www.upwork.com/freelancers/~01e0b5eb4d34696c94"
                 label="Up Work"

@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="mx-[16px] md:mx-[0px] md:mx-[30px]">
+    <section className="px-[16px] md:px-[30px]">
       <div
         className="max-w-[800px] mx-auto mt-[100px] md:mt-[180px] mb-[90px]"
         id="contact"

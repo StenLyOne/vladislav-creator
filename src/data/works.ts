@@ -232,7 +232,7 @@ const caseStudyBase: WorkCaseStudy[] = [
       "Mood-driven THC gummies ecommerce with subscription, bundle, and cart upsell mechanics",
     shortDescription:
       "A focused ecommerce experience for three functional gummy products: Socialize, Relax, and Sleep — built around mood selection, education, bundles, and subscribe-and-save.",
-    category: "Fitness Product",
+    category: "E-commerce Product",
     year: "2025",
     clientName: "Happly",
     heroImage: "/assets/happly/happly.png",

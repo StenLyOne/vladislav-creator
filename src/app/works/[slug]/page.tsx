@@ -312,11 +312,14 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
   const descriptionSummary = work.shortDescription || work.overviewText || "";
 
   return (
-    <main className="bg-white">
-      <div className="mx-auto max-w-[1600px] px-[16px] pb-[100px] pt-[110px] md:px-[30px] md:pb-[120px] md:pt-[134px]">
+    <main className="bg-white ">
+      <div className="mx-auto max-w-[1400px] px-[16px] pb-[100px] pt-[110px] md:px-[30px] md:pb-[120px] md:pt-[134px]">
         <div className="space-y-[20px]">
           <div className="flex flex-col gap-[12px] md:flex-row md:items-center md:justify-between">
-            <Link href="/#cases" className={SECONDARY_ACTION_CLASS}>
+            <Link href="/#cases" className={`${SECONDARY_ACTION_CLASS}, flex gap-2`}>
+              <svg className="text-blue-700 rotate-90" width="20" height="20" viewBox="0 0 13 22" fill="#CurrentCollor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.1382 11.7204C10.2102 11.6467 10.297 11.5876 10.3935 11.5466C10.4899 11.5056 10.594 11.4836 10.6996 11.4818C10.8052 11.48 10.9101 11.4985 11.008 11.5363C11.1059 11.574 11.1949 11.6301 11.2696 11.7014C11.3442 11.7726 11.4031 11.8574 11.4426 11.9508C11.4822 12.0442 11.5016 12.1442 11.4998 12.2449C11.4979 12.3456 11.4748 12.445 11.4318 12.537C11.3888 12.629 11.3269 12.7118 11.2496 12.7804L7.05558 16.7806C6.90814 16.9211 6.70827 17 6.49988 17C6.29149 17 6.09162 16.9211 5.94417 16.7806L1.75016 12.7804C1.6729 12.7118 1.61093 12.629 1.56795 12.537C1.52497 12.445 1.50186 12.3456 1.5 12.2449C1.49814 12.1442 1.51756 12.0442 1.55711 11.9508C1.59666 11.8574 1.65553 11.7726 1.7302 11.7014C1.80487 11.6301 1.89382 11.574 1.99174 11.5363C2.08966 11.4985 2.19454 11.48 2.30013 11.4818C2.40571 11.4836 2.50984 11.5056 2.60631 11.5466C2.70277 11.5876 2.78958 11.6467 2.86158 11.7204L5.7135 14.4405V4.75004C5.7135 4.55112 5.79635 4.36034 5.94383 4.21968C6.0913 4.07902 6.29132 4 6.49988 4C6.70844 4 6.90845 4.07902 7.05593 4.21968C7.2034 4.36034 7.28625 4.55112 7.28625 4.75004V14.4405L10.1382 11.7204Z" fill="blue" />
+              </svg>
               Back to works
             </Link>
 
@@ -472,15 +475,15 @@ export default async function WorkDetailsPage({ params }: WorkPageProps) {
                 <Link
                   key={relatedWork.slug}
                   href={`/works/${relatedWork.slug}`}
-                  className="space-y-[8px] overflow-hidden rounded-[10px] bg-bg p-[8px]"
+                  className="space-y-[8px] overflow-hidden rounded-[10px] bg-white  transition-shadow duration-300 hover:shadow-[0px_1px_50px_rgba(0,0,0,0.15)]"
                 >
                   <img
                     src={relatedWork.heroImage}
                     alt={relatedWork.title}
                     className="aspect-square w-full rounded-[8px] object-cover"
                   />
-                  <div className="space-y-[4px] px-[4px] pb-[6px]">
-                    <h4 className={CONTENT_TEXT_CLASS}>{relatedWork.title}</h4>
+                  <div className="space-y-[10px] px-[10px] pb-[10px]">
+                    <h3 className={CONTENT_TEXT_CLASS}>{relatedWork.title}</h3>
                     <p className={CONTENT_TEXT_CLASS}>{relatedWork.category}</p>
 
                   </div>

@@ -58,7 +58,7 @@ const FAQ = () => {
 
   return (
     <section
-      className="space-y-[30px] mt-[100px] md:mt-[180px] md:mx-[30px]"
+      className="px-[16px] md:px-[30px] space-y-[30px] mt-[100px] md:mt-[180px]"
       id="faq"
     >
       {!isMobile ? (
@@ -67,12 +67,12 @@ const FAQ = () => {
           Answers
         </h2>
       ) : (
-        <h2 className="uppercase px-[16px] md:px-[0px]">FAQ</h2>
+        <h2 className="uppercase">FAQ</h2>
       )}
       <div
         className={`${
           !isMobile ? "bg-bg" : ""
-        } md:py-[50px] px-[16px] md:px-[40px] flex flex-col rounded-[10px]`}
+        } md:py-[50px] md:px-[40px] px-[16px] flex flex-col rounded-[10px]`}
       >
         {faqData.map((faq, index) => (
           <div key={faq.id} className="cursor-pointer">

@@ -22,6 +22,9 @@ function Page() {
 
   return (
     <div className="bg-white flex flex-col md:flex-row w-auto relative ">
+
+      {/* <Header /> */}
+
       <div className="w-full max-w-[1920px] z-[5] md:z-[10] mx-auto">
         <Main setIsOpen={setIsOpen} />
         <Works />

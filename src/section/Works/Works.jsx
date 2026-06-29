@@ -9,7 +9,7 @@ const Works = () => {
 
   return (
     <section
-      className="md:pr-[30px] md:pb-[305px] md:pt-[90px] px-[16px] pb-[80px] space-y-[20px]"
+      className="px-[16px] md:px-[30px] md:pb-[305px] md:pt-[90px] pb-[80px] space-y-[20px]"
       id="cases"
     >
       <div>
