@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AudioVisualizer from "../../components/AudioVisualizer/AudioVisualizer";

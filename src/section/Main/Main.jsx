@@ -1,6 +1,10 @@
-import Button from "../../components/Button/Button";
+"use client";
 
-const Main = ({ setIsOpen }) => {
+import Button from "../../components/Button/Button";
+import { usePopup } from "../../components/Popup/PopupProvider";
+
+const Main = () => {
+  const { openPopup } = usePopup();
   const handleSmoothScroll = (id) => {
     const target = document.getElementById(id);
     if (target) {
@@ -87,7 +91,7 @@ const Main = ({ setIsOpen }) => {
                 </h1>
               </div>
               <div className="flex justify-center w-full gap-[5px] mt-[50px] z-100 relative">
-                <div onClick={() => setIsOpen(true)}>
+                <div onClick={openPopup}>
                   <Button>Get More Leads</Button>
                 </div>
                 <button

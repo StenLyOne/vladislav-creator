@@ -1,10 +1,14 @@
+"use client";
+
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "../../components/Button/Button";
 import useIsMobile from "../../hooks/useIsMobile";
 import Image from "next/image";
+import { usePopup } from "../../components/Popup/PopupProvider";
 
-const About = ({ setIsOpen }) => {
+const About = () => {
+  const { openPopup } = usePopup();
   const sectionRef = useRef(null);
   const [hobbies, setHobbies] = useState(1);
   const images = {
@@ -206,7 +210,7 @@ const About = ({ setIsOpen }) => {
             start to <br />
             work now
           </h2>
-          <div onClick={() => setIsOpen(true)}>
+          <div onClick={openPopup}>
             <Button>Contact us</Button>
           </div>
         </motion.div>

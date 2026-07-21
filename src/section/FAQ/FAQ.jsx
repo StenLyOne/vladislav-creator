@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import FAQItem from "../../components/FAQItem/FAQItem";
 import useIsMobile from "../../hooks/useIsMobile";

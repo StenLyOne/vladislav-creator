@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Button from "../../components/Button/Button";
 import { sendFormData } from "../../utils/api";
@@ -71,7 +73,7 @@ const PopUp = ({ close }) => {
   };
 
   return (
-    <section className="my-[30px] min-[670px]:md:my-[30px] md:mx-[30px] h-[100vh] w-full flex flex-col justify-end">
+    <section className=" relative my-[30px] min-[670px]:md:my-[30px] md:mx-[30px] h-[100vh] w-full flex flex-col justify-end">
       <button
         className="color-white w-auto flex justify-end items-center gap-[8px] mb-[20px]"
         style={{ fontSize: "14px" }}
@@ -89,7 +91,7 @@ const PopUp = ({ close }) => {
             CONTACT
           </h2>
           <button
-            className="w-[24px] h-[24px] flex items-center justify-end md:hidden"
+            className="w-[24px] absolute top-27 right-5 h-[24px] flex items-center justify-end md:hidden"
             onClick={() => close()}
           >
             <img
