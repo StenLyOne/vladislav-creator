@@ -59,10 +59,10 @@ const testimonials = [
 const services = [
   {
     id: 1,
-    title: "LANDING",
+    title: "WEBSITE",
     terms: "4 days+",
     description:
-      "I create landing pages for any purpose: a product, a promo, an event, or a special project. Designed to convert and engage your audience.",
+      "Modern websites for businesses, products, services, and personal brands. Clear structure, strong visuals, and a smooth user experience.",
     priceDesign: "400$",
     priceDesignDev: "700$",
     position: "top-0 left-10",
@@ -72,27 +72,27 @@ const services = [
     title: "E-COMMERCE",
     terms: "7 days+",
     description:
-      "Online stores built for growth. A smooth user experience, easy checkout, and scalable design for any business.",
+      "Online stores built for growth. A smooth shopping experience, clear product discovery, easy checkout, and scalable design.",
     priceDesign: "1000$",
     priceDesignDev: "2000$",
     position: "top-1/3 right-0",
   },
   {
     id: 3,
-    title: "CORPORATE WEBSITE",
-    terms: "4 days+",
+    title: "MOBILE APP",
+    terms: "7 days+",
     description:
-      "Professional websites for companies that need a strong digital presence. Structured, informative, and built to impress.",
+      "Mobile applications with intuitive flows, clear interfaces, and thoughtful user experiences for iOS and Android.",
     priceDesign: "1000$",
     priceDesignDev: "2000$",
     position: "bottom-10 left-10",
   },
   {
     id: 4,
-    title: "MULTI-PAGE PLATFORM",
+    title: "WEB APP",
     terms: "10 days+",
     description:
-      " Custom-built platforms with multiple pages, deep UX optimization, and seamless functionality for complex projects.",
+      "Custom web applications with complex user flows, dashboards, scalable interfaces, and functionality tailored to your product.",
     priceDesign: "2000$",
     priceDesignDev: "4000$",
     position: "bottom-0 right-10",
@@ -248,9 +248,8 @@ const Testimonials = () => {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className={`absolute rounded-lg space-y-[10px] ${
-                  !isMobile ? testimonial.position : testimonial.positionMob
-                }`}
+                className={`absolute rounded-lg space-y-[10px] ${!isMobile ? testimonial.position : testimonial.positionMob
+                  }`}
               >
                 <div className="flex items-center gap-[8px]">
                   <div className="w-[60px] h-[60px] rounded-[100px] border border-white overflow-hidden">
@@ -281,13 +280,13 @@ const Testimonials = () => {
                           className=" w-[24px] h-[24px] flex items-center justify-center"
                           onClick={() => handlePlay(testimonial.id)}
                         >
-                            <img
-                              className="w-[12px] h-[12px]"
-                              src={
-                                currentAudioId === testimonial.id
+                          <img
+                            className="w-[12px] h-[12px]"
+                            src={
+                              currentAudioId === testimonial.id
                                 ? "/assets/img/pause.svg"
                                 : "/assets/img/play.svg"
-                              }
+                            }
                             alt=""
                           />
                         </button>
@@ -307,7 +306,7 @@ const Testimonials = () => {
                           00:
                           {String(
                             duration[testimonial.id] -
-                              (currentTime[testimonial.id] || 0)
+                            (currentTime[testimonial.id] || 0)
                           ).padStart(2, "0")}
                         </p>
                       )}
@@ -320,21 +319,19 @@ const Testimonials = () => {
                   >
                     <img src="/assets/img/A.svg" alt="" className="z-[10]" />
                     <div
-                      className={`absolute bg-white p-[16px] rounded-[10px] color-blue min-w-[280px] z-[11] shadow-[0px_1px_50px_rgba(0,0,0,0.15)] ${
-                        isMobile || testimonial.top === false
+                      className={`absolute bg-white p-[16px] rounded-[10px] color-blue min-w-[280px] z-[11] shadow-[0px_1px_50px_rgba(0,0,0,0.15)] ${isMobile || testimonial.top === false
                           ? "top-[130%] left-[-540%]"
                           : "bottom-[130%] left-[-12%]"
-                      } ${isOpen === testimonial.id ? "" : "hidden"}`}
+                        } ${isOpen === testimonial.id ? "" : "hidden"}`}
                     >
                       <p>{testimonial.text}</p>
                       <img
                         src="/assets/img/vector.svg"
                         alt=""
-                        className={`absolute ${
-                          isMobile || testimonial.top === false
+                        className={`absolute ${isMobile || testimonial.top === false
                             ? "top-[-8px] transform rotate-180 right-[5%]"
                             : "bottom-[-8px]"
-                        }`}
+                          }`}
                       />
                     </div>
                   </div>

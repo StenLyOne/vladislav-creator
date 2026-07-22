@@ -12,7 +12,7 @@ const Works = () => {
       <div>
         <p>My works</p>
       </div>
-      <div className="grid max-[1280px]:grid-cols-1 min-[1280px]:grid-cols-2 grid-rows-auto gap-x-[20px] gap-y-[80px] md:gap-y-[150px]">
+      <div className="grid max-[900px]:grid-cols-1 min-[900px]:grid-cols-2 grid-rows-auto gap-x-[20px] gap-y-[80px] md:gap-y-[150px]">
         {landingWorks.map((work, index) => {
           const isInternalCase = Boolean(work.slug);
           const linkHref = isInternalCase ? `/works/${work.slug}` : undefined;
