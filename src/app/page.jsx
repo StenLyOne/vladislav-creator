@@ -1,4 +1,3 @@
-import { PopupProvider } from "../components/Popup/PopupProvider";
 import VisitTracker from "../components/VisitTracker";
 import Main from "../section/Main/Main";
 import Works from "../section/Works/Works";
@@ -9,7 +8,7 @@ import Contact from "../section/Contact/Contact";
 
 export default function Page() {
   return (
-    <PopupProvider>
+    <>
       <VisitTracker />
       <div className="bg-white flex flex-col md:flex-row w-auto relative">
         <div className="w-full max-w-[1920px] z-[5] md:z-[10] mx-auto">
@@ -21,6 +20,6 @@ export default function Page() {
           <Contact />
         </div>
       </div>
-    </PopupProvider>
+    </>
   );
 }

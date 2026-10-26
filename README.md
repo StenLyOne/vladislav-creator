@@ -16,7 +16,10 @@ Optional:
 
 - `SENDERBOT_BASE_URL` (default: `https://senderbot-9qcp.onrender.com`)
 
-Contact and visit notifications are proxied through Next route handlers:
+Visit notifications are proxied through a Next route handler:
 
-- `POST /api/contact`
 - `POST /api/visit`
+
+All project enquiries go through Upwork. The profile URL is defined in
+`src/lib/contact.js`. The contact form is disabled; `POST /api/contact` returns
+`410 Gone` without forwarding submissions.

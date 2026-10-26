@@ -1,10 +1,9 @@
 "use client";
 
 import Button from "../../components/Button/Button";
-import { usePopup } from "../../components/Popup/PopupProvider";
+import { UPWORK_URL } from "../../lib/contact";
 
 const Main = () => {
-  const { openPopup } = usePopup();
   const handleSmoothScroll = (id) => {
     const target = document.getElementById(id);
     if (target) {
@@ -91,9 +90,7 @@ const Main = () => {
                 </h1>
               </div>
               <div className="flex justify-center w-full gap-[5px] mt-[50px] z-100 relative">
-                <div onClick={openPopup}>
-                  <Button>Get More Leads</Button>
-                </div>
+                <Button href={UPWORK_URL} target="_blank">Get More Leads</Button>
                 <button
                   onClick={() => handleSmoothScroll("cases")}
                   className="relative bg-blue color-blue p-[11px] px-[15px] rounded-[10px] button transition-all duration-200 overflow-hidden group"

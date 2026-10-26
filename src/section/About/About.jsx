@@ -5,10 +5,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "../../components/Button/Button";
 import useIsMobile from "../../hooks/useIsMobile";
 import Image from "next/image";
-import { usePopup } from "../../components/Popup/PopupProvider";
+import { UPWORK_URL } from "../../lib/contact";
 
 const About = () => {
-  const { openPopup } = usePopup();
   const sectionRef = useRef(null);
   const [hobbies, setHobbies] = useState(1);
   const images = {
@@ -210,9 +209,7 @@ const About = () => {
             start to <br />
             work now
           </h2>
-          <div onClick={openPopup}>
-            <Button>Contact us</Button>
-          </div>
+          <Button href={UPWORK_URL} target="_blank">Contact on Upwork</Button>
         </motion.div>
         <motion.div
           className="md:absolute h-[200%] md:h-auto w-full mt-[100px] md:mt-[0px] md:top-[120%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-[10]"
@@ -528,7 +525,7 @@ const About = () => {
                   <a
                     className="color-green underline"
                     target="_blank"
-                    href="https://www.upwork.com/freelancers/~01e0b5eb4d34696c94"
+                    href={UPWORK_URL}
                     rel="noopener noreferrer"
                   >
                     Upwork.
