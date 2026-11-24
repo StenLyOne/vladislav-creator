@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { landingWorks } from "../../data/works";
 import Image from "next/image";
-import WorksCardMotion from "./WorksCardMotion";
 
 const Works = () => {
   return (
@@ -18,8 +17,8 @@ const Works = () => {
           const linkHref = isInternalCase ? `/works/${work.slug}` : undefined;
 
           const card = (
-            <WorksCardMotion
-              className={`relative cursor-pointer transition-shadow duration-300 hover:shadow-[0px_1px_50px_rgba(0,0,0,0.15)] rounded-[10px] h-auto overflow-hidden ${index % 2 !== 0 ? "min-[1280px]:translate-y-[125px]" : ""}`}
+            <article
+              className={`relative cursor-pointer transition-shadow duration-300 ease-out motion-reduce:transition-none hover:shadow-[0px_1px_50px_rgba(0,0,0,0.15)] rounded-[10px] h-auto overflow-hidden ${index % 2 !== 0 ? "min-[1280px]:translate-y-[125px]" : ""}`}
             >
               <div className="relative overflow-hidden">
                 <div className="h-full md:h-[500px] md:min-h-[400px] xl:h-auto xl:min-h-full 2xl::h-auto">
@@ -46,7 +45,7 @@ const Works = () => {
                   ) : null}
                 </div>
               </div>
-            </WorksCardMotion>
+            </article>
           );
 
           if (isInternalCase) {

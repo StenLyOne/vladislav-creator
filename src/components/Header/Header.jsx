@@ -21,7 +21,37 @@ const primaryActionClass =
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const path = usePathname()
+
+  useEffect(() => {
+    let previousScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const maxScrollY = Math.max(
+        0,
+        document.documentElement.scrollHeight - window.innerHeight
+      );
+      const currentScrollY = Math.min(maxScrollY, Math.max(0, window.scrollY));
+
+      if (isOpen || currentScrollY <= 80) {
+        setIsHidden(false);
+        previousScrollY = currentScrollY;
+        return;
+      }
+
+      const distance = currentScrollY - previousScrollY;
+
+      if (Math.abs(distance) < 10) return;
+
+      setIsHidden(distance > 0);
+      previousScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen, path]);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -32,7 +62,14 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[60] px-[16px] pt-[16px] md:px-[30px] md:pt-[20px]">
+    <header
+      className={`fixed inset-x-0 top-0 z-[60] px-[16px] pt-[16px] md:px-[30px] md:pt-[20px] transition-transform duration-400 ease-in-out motion-reduce:transition-none ${
+        isHidden && !isOpen
+          ? "-translate-y-[calc(100%+48px)] pointer-events-none"
+          : "translate-y-0"
+      }`}
+      inert={isHidden && !isOpen}
+    >
       <div className={`mx-auto ${path === "/" ?  "max-w-[1920px]" : "max-w-[1340px]"} rounded-[22px] border border-[rgba(187,198,218,0.72)] bg-white/30 shadow-[0_18px_44px_rgba(19,19,19,0.08)] backdrop-blur-[18px]`}>
         <div className="flex items-center justify-between gap-[16px] px-[16px] py-[14px] md:px-[24px]">
           <Link href="/#home" className="shrink-0 color-blue">
